@@ -1,0 +1,355 @@
+body
+{
+background-color: rgba(224,238,238, 0.4);
+}
+
+
+#container
+{
+width: 1250px;
+height: auto;
+margin: auto;
+background-color: DarkSlateGray;
+border:3px solid white;
+box-shadow: 10px 10px 10px 10px rgba(33, 46, 179, 0.3);
+}
+
+#topbar
+{
+width:auto; 
+display:block; 
+height:180px;
+text-align:center;
+font-family: Android, Fontana, Bell MT, Arial, sans-serif;
+color: #3C378B;
+word-spacing: 100%;
+}
+
+#lbt
+{
+height: 100px;
+width : 450px;
+float: center;
+margin: auto;
+background-color: LavenderBlush;
+border:3px solid black;
+margin-top: 10px;
+border-radius: 20px;
+}
+
+#lbt img 
+{
+position: relative;
+margin-top: -20px;
+}
+
+#ref
+{
+height: 25px;
+width: 250px;
+float: center;
+margin: auto;
+margin-bottom: 10px;
+color: RosyBrown;
+}
+
+#réseaux
+{
+position: relative;
+height: auto;
+width: auto;
+float: left;
+list-style: none;
+text-decoration: none;
+margin-left: 15px;
+bottom: 75px;
+font-family: Arial;
+font-size: 10px;
+background-color: ;
+cursor: pointer;
+}
+
+#réseaux li
+{
+display:inline-block;
+position: relative;
+padding: 5px;
+float: left;
+right: 20px;
+}
+
+#réseaux ul img
+{
+width: 45px; 
+height : 45px;
+}
+
+#réseaux ul :hover img
+{
+width: 60px; 
+height: 60px;
+}
+
+#zone_co
+{
+height: auto;
+width: 250px;
+float: right;
+margin-top: -10px ;
+margin-right: 20px;
+background-color: ;
+font-family: Calibri, Arial;
+font-size: 20px;
+}
+
+#main
+{
+width: 1100px;
+height:auto; 
+display:block;
+}
+
+#navbar
+{
+width: 250px; 
+display:block; 
+height: auto;
+background-color: ;
+font-size: 2em;
+word-spacing: 100%;
+color: BurlyWood;
+}
+
+#navbar .ru
+{
+float: left;
+text-align: center;
+margin-left: 30px;
+margin-top: 15px;
+font-family: Verdana;
+}
+
+span 
+{
+margin-right: 15px;
+}
+
+#menu
+{
+margin-left: 15px;
+bottom: 30px;
+padding: 0px;
+float: left;
+position: relative;
+box-shadow: 10px 30px 30px 0px rgba(23, 12, 12, 0.3);
+}
+
+#menu  li 
+{
+list-style: none;
+background: WhiteSmoke;
+width: 300px;
+border-bottom: 2px solid black;
+display: block;
+padding: 12px;
+border-left: 5px solid DeepSkyBLue;
+cursor: pointer;
+}
+
+#menu li a 
+{
+font-family: Calibri, Arial;
+text-decoration: none;
+color: black;
+}
+
+#menu :hover 
+{
+background-color: #394D39;
+}
+
+#menu :hover a
+{
+color: snow;
+}
+
+.bip
+{
+padding: 0px;
+}
+
+#menu .bip 
+{
+margin-left: -17px;
+position: absolute;
+visibility: hidden;
+transform: scaleY(0);
+transform-origin: 50% 0;
+transition: transform 1s ease;
+}
+
+#menu .bip a
+{
+color: #05CB05;
+}
+
+#menu  :hover  ul.bip
+{
+position: relative;
+display: block;
+visibility: visible;
+transform: scaleY(1);
+}
+
+#columnright
+{
+width: 850px;
+height: 650px; 
+margin-left: 250px;
+font-family: Calibri, Arial;
+}
+
+.text
+{
+margin-left: 20px;
+position: relative;
+float: center;
+top: 20px;
+text-align: center;
+margin-bottom: 50px;
+color: BurlyWood;
+font-family: Verdana;
+font-size: 15px;
+}
+
+@-webkit-keyframes sliderTop
+{
+% {top: 0%;}
+0% {top: 0%;}
+15% {top: 0%;}
+20%{top: -100%;}
+35% {top: -100%;}
+50% {top: -200%;}
+65% {top: -200%;}
+80% {top: -300%;}
+95% {top: -300%;}
+100%{top: -300%;}
+}
+
+#diaporama
+{
+max-width: 680px;
+height: 350px;
+overflow: hidden;
+margin-left: 150px;
+bottom: -150px;
+position: relative;
+border: 5px solid MediumSpringGreen;
+box-shadow: 10px 30px 30px 0px rgba(23, 12, 12, 0.3);
+cursor: pointer;
+}
+
+#diaporama figure 
+{
+width: 685px;
+height: 350px;
+position: relative;
+-webkit-animation: 15s sliderTop infinite;
+margin: auto;
+}
+
+#diaporama figure img 
+{
+width: 685px;
+height: 350px;
+float: left;
+}
+
+#rédac
+{
+width: 670px;
+height: 100px;
+overflow: auto;
+margin-top: -350px;
+position: absolute;
+margin-left: 170px;
+font-size: 20px;
+Font-Weight: Bold;
+color: MintCream;
+}
+
+#footer
+{
+display:block; 
+height: 370px;
+background-color: silver;
+color: DimGray;
+}
+
+.pro
+{
+position: center;
+display: block;
+width: 320px;
+Font-Weight: Bold;
+font-family: Calibri, Arial;
+font-size: 17px;
+margin: auto;
+margin-top: 25px;
+
+}
+
+.pro p 
+{
+margin-left: 15px;
+margin-top: 5px;
+}
+
+.lb
+{
+margin-left: 30px;
+position: relative;
+}
+
+.phone 
+{
+width: 250px;
+float: left;
+height: auto;
+margin-top: -300px;
+font-family: Calibri, Arial;
+margin-left: 60px;
+}
+
+.sp p
+{
+position: relative;
+left: 50px;
+top: 5px;
+}
+
+.frandroid
+{
+width: 250px;
+float: right;
+height: auto;
+margin-top: -300px;
+font-family: Calibri, Arial;
+margin-right: 60px;
+}
+
+.sp2 p
+{
+position: relative;
+left: 50px;
+top: 20px;
+}
+
+.part
+{
+box-shadow: 10px 20px 20px 0px rgba(81, 61, 61, 0.3);
+}
+
+a:link{color: silver;}
+a:visited{color: silver ;}
+a:hover{color: DodgerBlue;}

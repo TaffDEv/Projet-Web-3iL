@@ -1,0 +1,31 @@
+﻿/* ceci est un css seulement pour les sous pages comme xbox ou play station */
+
+
+body
+/* creation d'un menu pour le retour a la page d'origine; ex: pour xbox la page d'origine correspond à consoles */
+
+
+.menu li
+{
+list-style: none;	
+}
+
+.Button 
+{
+font-weight: bold;
+-webkit-transition: all 0.5s;
+-webkit-border-radius: 5px;
+display: block;
+background: Navy;
+width: 200px;
+height: 25px;
+text-align: center;
+left: 15px;
+}
+
+.Button:hover 
+{
+color: red;
+background: #333;
+cursor: pointer;
+}
