@@ -55,17 +55,18 @@ color: RosyBrown;
 
 #réseaux
 {
-position: relative;
+position: top;
 height: auto;
 width: auto;
 float: left;
+margin-top: -10px ;
 list-style: none;
 text-decoration: none;
 margin-left: 15px;
-bottom: 75px;
-font-family: Arial;
+/*margin-bottom: 10px;*/
+/*font-family: Arial;
 font-size: 10px;
-background-color: ;
+background-color: ;*/
 cursor: pointer;
 }
 
@@ -111,8 +112,12 @@ display:block;
 
 #navbar
 {
-width: 250px; 
+position: absolute;
+float: left;
 display:block; 
+margin-left: 30px;
+margin-top: 30px;
+width: auto; 
 height: auto;
 background-color: ;
 font-size: 2em;
@@ -122,10 +127,10 @@ color: BurlyWood;
 
 #navbar .ru
 {
-float: left;
+/*float: left;
 text-align: center;
 margin-left: 30px;
-margin-top: 15px;
+margin-top: 30px;*/
 font-family: Verdana;
 }
 
@@ -136,7 +141,7 @@ margin-right: 15px;
 
 #menu
 {
-margin-left: 15px;
+/*margin-left: 15px;*/
 bottom: 30px;
 padding: 0px;
 float: left;
@@ -280,69 +285,26 @@ color: MintCream;
 
 #footer
 {
-display:block; 
-height: 370px;
+padding: 5px 0;
 background-color: silver;
 color: DimGray;
 }
 
-.pro
-{
-position: center;
-display: block;
-width: 320px;
-Font-Weight: Bold;
-font-family: Calibri, Arial;
-font-size: 17px;
-margin: auto;
-margin-top: 25px;
-
-}
-
 .pro p 
 {
-margin-left: 15px;
-margin-top: 5px;
+position: absolute;
+text-align: justify;
+display: inline-block;
+Font-Weight: Bold;
+font-family: Calibri, Arial;
+font-size: 16px;
+margin-bottom: 10px;
 }
 
 .lb
 {
 margin-left: 30px;
 position: relative;
-}
-
-.phone 
-{
-width: 250px;
-float: left;
-height: auto;
-margin-top: -300px;
-font-family: Calibri, Arial;
-margin-left: 60px;
-}
-
-.sp p
-{
-position: relative;
-left: 50px;
-top: 5px;
-}
-
-.frandroid
-{
-width: 250px;
-float: right;
-height: auto;
-margin-top: -300px;
-font-family: Calibri, Arial;
-margin-right: 60px;
-}
-
-.sp2 p
-{
-position: relative;
-left: 50px;
-top: 20px;
 }
 
 .part
