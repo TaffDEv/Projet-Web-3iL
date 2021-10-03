@@ -127,10 +127,6 @@ color: BurlyWood;
 
 #navbar .ru
 {
-/*float: left;
-text-align: center;
-margin-left: 30px;
-margin-top: 30px;*/
 font-family: Verdana;
 }
 
@@ -141,7 +137,6 @@ margin-right: 15px;
 
 #menu
 {
-/*margin-left: 15px;*/
 bottom: 30px;
 padding: 0px;
 float: left;
@@ -285,6 +280,7 @@ color: MintCream;
 
 #footer
 {
+margin-top: 50px;
 padding: 5px 0;
 background-color: silver;
 color: DimGray;
