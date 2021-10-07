@@ -9,7 +9,7 @@ background-color: rgba(224,238,238, 0.4);
 width: 1250px;
 height: auto;
 margin: auto;
-background-color: DarkSlateGray;
+background-color: #f5f4ed;
 border:3px solid white;
 box-shadow: 10px 10px 10px 10px rgba(33, 46, 179, 0.3);
 }
@@ -25,7 +25,7 @@ color: #3C378B;
 word-spacing: 100%;
 }
 
-#lbt
+/*#lbt
 {
 height: 100px;
 width : 450px;
@@ -35,7 +35,7 @@ background-color: LavenderBlush;
 border:3px solid black;
 margin-top: 10px;
 border-radius: 20px;
-}
+}*/
 
 #lbt img 
 {
@@ -43,14 +43,15 @@ position: relative;
 margin-top: -20px;
 }
 
-#ref
+#ref h1
 {
 height: 25px;
 width: 250px;
 float: center;
-margin: auto;
+text-decoration: none;
+margin: auto;	
 margin-bottom: 10px;
-color: RosyBrown;
+color: Black;
 }
 
 #réseaux
@@ -116,7 +117,7 @@ position: absolute;
 float: left;
 display:block; 
 margin-left: 30px;
-margin-top: 100px;
+margin-top: 230px;
 width: auto; 
 height: auto;
 background-color: ;
@@ -209,7 +210,20 @@ margin-left: 250px;
 font-family: Calibri, Arial;
 }
 
-.text
+#columnright h1
+{
+margin-left: 150px;
+position: relative;
+float: center;
+top: 20px;
+text-align: center;
+margin-bottom: 50px;
+color: Black;
+font-family: Verdana;
+/*font-size: 15px;*/
+}
+
+/*.text
 {
 margin-left: 20px;
 position: relative;
@@ -217,10 +231,10 @@ float: center;
 top: 20px;
 text-align: center;
 margin-bottom: 50px;
-color: BurlyWood;
+color: Black;
 font-family: Verdana;
 font-size: 15px;
-}
+}*/
 
 @-webkit-keyframes sliderTop
 {
@@ -275,12 +289,12 @@ position: absolute;
 margin-left: 170px;
 font-size: 20px;
 Font-Weight: Bold;
-color: MintCream;
+color: Black;
 }
 
 #footer
 {
-margin-top: 50px;
+margin-top: 150px;
 padding: 5px 0;
 background-color: silver;
 color: DimGray;
