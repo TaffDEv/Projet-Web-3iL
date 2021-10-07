@@ -54,44 +54,6 @@ margin-bottom: 10px;
 color: Black;
 }
 
-#réseaux
-{
-position: top;
-height: auto;
-width: auto;
-float: left;
-margin-top: -10px ;
-list-style: none;
-text-decoration: none;
-margin-left: 15px;
-/*margin-bottom: 10px;*/
-/*font-family: Arial;
-font-size: 10px;
-background-color: ;*/
-cursor: pointer;
-}
-
-#réseaux li
-{
-display:inline-block;
-position: relative;
-padding: 5px;
-float: left;
-right: 20px;
-}
-
-#réseaux ul img
-{
-width: 45px; 
-height : 45px;
-}
-
-#réseaux ul :hover img
-{
-width: 60px; 
-height: 60px;
-}
-
 #zone_co
 {
 height: auto;
@@ -166,7 +128,7 @@ color: black;
 
 #menu :hover 
 {
-background-color: #394D39;
+background-color: #111111;
 }
 
 #menu :hover a
@@ -191,7 +153,7 @@ transition: transform 1s ease;
 
 #menu .bip a
 {
-color: #05CB05;
+color: #666666;
 }
 
 #menu  :hover  ul.bip
