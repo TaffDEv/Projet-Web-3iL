@@ -94,23 +94,26 @@ text-transform: uppercase;
 {
 margin-left: 130px ;
 list-style: none;
-/*background: WhiteSmoke;*/
-/*background: green;*/
 width: auto;
 height: auto;
-display: inline-block;
-padding: 10px;
-/*border-left: 5px solid DeepSkyBLue;*/
+
 cursor: pointer;
 }
 
-#navbar .bip{
-    color: black;
+#navbar .bip7{
+    color: black;  
+    
 }
 
-/*#navbar :hover .bip{
-    color: pink;
-}*/
+#navbar .bip{
+    padding: 10px;
+    display: inline-block;   
+    
+}
+
+#navbar :hover {
+    color: orange;    
+}
 
 #columnright
 {
@@ -126,15 +129,14 @@ font-family: Calibri, Arial;
 {
 list-style: none;
 background-color: snow;
-padding: auto;
+padding: 30px;
 width: auto;
 height: auto;
-/*overflow: auto;*/
 margin-top: 50px;
-margin-bottom: 50px;
+margin-bottom: 80px;
 position: relative;
 /*margin-left: 30px;*/
-font-size: 30px;
+font-size: 25px;
 Font-Weight: Bold;
 color: Black;
 border-radius: 20px;
@@ -142,28 +144,37 @@ box-shadow: 10px 20px 20px 0px rgba(81, 61, 61, 0.3);
 }
 
 .rédaq{
-    /*padding: 15px;*/
+    padding: 15px;
     position: relative;
-    background-color: green;
+    width: auto;
+    height: auto;
+   /* background-color: green;*/
     /*display: inline-block;*/
     margin-left: 190px;
-    margin-top: -190px;
+    margin-top: -180px;
    
 }
 
+.rédaq a{
+    color: black;
+}
+
 .articles{
-    /*padding: 15px;*/
-    width: 150px;
-    height: 150px;
-    margin-left: 11px;
-    margin-top: 10px; 
+    position: relative;
+    padding: 5px;
+    width: 170px;
+    height: 170px;
+    /*margin-left: 11px;
+    margin-top: 10px; */
     border-radius: 20px; 
     margin-bottom: 10px;
-    background-color: blue;
+    /*background-color: blue;*/
+    border: 5px solid MediumSpringGreen;
+    box-shadow: 10px 30px 30px 0px rgba(23, 12, 12, 0.3);
 }
 
 :hover .rédaq{
-    color: aquamarine;
+    /*color: aquamarine;*/
 
 }
 
