@@ -79,7 +79,7 @@ display:block;
 font-family: Calibri, Arial;
 }
 
-#navbar
+nav
 {
 width: auto; 
 height: auto;
@@ -90,7 +90,7 @@ word-spacing: 100%;
 text-transform: uppercase;
 }
 
-#navbar li
+nav li
 {
 margin-left: 130px ;
 list-style: none;
@@ -100,18 +100,18 @@ height: auto;
 cursor: pointer;
 }
 
-#navbar .bip7{
+nav .bip7{
     color: black;  
     
 }
 
-#navbar .bip{
+nav .bip{
     padding: 10px;
     display: inline-block;   
     
 }
 
-#navbar :hover {
+nav :hover {
     color: orange;    
 }
 
