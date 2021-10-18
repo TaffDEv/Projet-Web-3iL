@@ -59,11 +59,46 @@
 				</ul>	
 		</nav>
 			
-		<div id="main">
+		<!-- fin div navbar -->
 
+		<div id="main">
+	
+		</div>
+		<!-- fin div main -->
+
+
+		<!-- début div footer -->
+		<div id="footer"> 
 			
-					<!-- fin div navbar -->
+			<div class="pro">
 					
+				<span class="lb">	<img class="part" src="./lbt.png" width="250" height="150"/> </span>
+				
+				<p>
+					A propos du LaboTech. <br>
+					Le LaboTech est un site web qui traite de l'actualité High-Tech. <br>
+					Notre veille s'articule dans les secteurs : Jeux Vidéo, Web, Mobile et High-Tech. <br>
+					Vous pouvez vous tenir au courant des dernières nouveautés publiées 
+					sur notre site web mais aussi sur nos réseaux sociaux.<br><br>
+					Copyright 2021 © 3IL | Tous droits réservés				
+				</p>
+			</div>
+				
+		</div>
+
+			<!-- fin div footer -->
+
+	</div>
+		<!-- fin div container -->
+
+	
+	<div id='hidden'>
+		<div id = 'accueil'>
+			Ceci est l'accueil
+		</div>
+
+		<div id = 'articles'>
+				
 			<div id="columnright">  			
 					<!--<div class="text"> -->
 				<li class="bulle">
@@ -153,51 +188,27 @@
 					
 				
 			</div>
-				<!-- fin div columnright -->			
-		</div>
-		<!-- fin div main -->
-
-
-		<!-- début div footer -->
-		<div id="footer"> 
-			
-			<div class="pro">
-					
-				<span class="lb">	<img class="part" src="./lbt.png" width="250" height="150"/> </span>
-				
-				<p>
-					A propos du LaboTech. <br>
-					Le LaboTech est un site web qui traite de l'actualité High-Tech. <br>
-					Notre veille s'articule dans les secteurs : Jeux Vidéo, Web, Mobile et High-Tech. <br>
-					Vous pouvez vous tenir au courant des dernières nouveautés publiées 
-					sur notre site web mais aussi sur nos réseaux sociaux.<br><br>
-					Copyright 2021 © 3IL | Tous droits réservés				
-				</p>
-			</div>
-				
+				<!-- fin div columnright -->		
 		</div>
 
-			<!-- fin div footer -->
+		<div id = 'blog'>
 
-	</div>
-		<!-- fin div container -->
+		</div>
 
-	
-	<div id="hidden">
 		<div id = 'playerJS'> <!-- nav -->
 
-			<ul id="galerie_mini">
+			<ul id='galerie_mini'>
 
 			</ul>
 
-				  <dl id="photo">
-				    <dd><img id="big_pict"/></dd>
+				  <dl id='photo'>
+				    <dd><img id='picture'/></dd>
 				  </dl>
-					<button id="backwardButton" type="button" onclick=backwardGalery()>
+					<button id='backwardButton' type="button" onclick=changePhoto('backward')>
 				    	<
 					</button>
-					<span id ="text-img">Default</span>
-					<button id="forwardButton" type="button" onclick=forwardGalery()>
+					<span id ='text-img'>Default</span>
+					<button id='forwardButton' type="button" onclick=changePhoto('forward')>
 					    >
 					</button>
 		</div>	

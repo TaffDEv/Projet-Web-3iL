@@ -1,18 +1,32 @@
 var imgIndex = 0;
+var main = null;
+var hidden = null;
 
 function initGalery() {
-	var photos = document.getElementById('galerie_mini');
+
+
+	var galery = document.getElementById('playerJS');
+	var main = document.getElementById('main');
+	main.innerHTML = galery.innerHTML;
+	var photos =  document.getElementById('galerie_mini');
   	var liens = photos.getElementsByTagName('img');
 	var text = document.getElementById('text-img');
-	var big_photo = document.getElementById('big_pict');
-	big_photo.src = liens[imgIndex].src; // On change l'attribut src de l'image en le remplaçant par la valeur du lien
-	big_photo.title = liens[imgIndex].title;
-	text.innerHTML = ((imgIndex+1) + '/' + liens.length);
+	var picture = document.getElementById('picture');
+	picture.src = liens[imgIndex].src; // On change l'attribut src de l'image en le remplaçant par la valeur du lien
+	picture.title = liens[imgIndex].title;
+	text.innerHTML = ((imgIndex + 1) + '/' + liens.length);
+}
 
+function initArticles() {
+	var articles = document.getElementById('articles');
 	var main = document.getElementById('main');
-	var hidden = document.getElementById('playerJS');
-	main.innerHTML = hidden.innerHTML;
+	main.innerHTML = articles.innerHTML;
+}
 
+function initAccueil() {
+	var accueil = document.getElementById('accueil');
+	var main = document.getElementById('main');
+	main.innerHTML = accueil.innerHTML;
 }
 
 function loadDoc() {
@@ -27,40 +41,36 @@ function loadDoc() {
 
 }
 
-function forwardGalery() {
+function changePhoto(par1) {
 	var photos = document.getElementById('galerie_mini');
   	var liens = photos.getElementsByTagName('img');
 	var text = document.getElementById('text-img');
-	var big_photo = document.getElementById('big_pict');
-	if(imgIndex == liens.length-1)
+	var picture = document.getElementById('picture');
+	if(par1 == 'forward')
 	{
-		imgIndex = 0;
+		if(imgIndex == liens.length-1)
+		{
+			imgIndex = 0;
+		}
+		else
+		{
+			imgIndex++;
+		}
 	}
-	else
+	else if(par1 == 'backward')
 	{
-		imgIndex++;
+		if(imgIndex == 0)
+		{
+			imgIndex = liens.length-1;
+		}
+		else
+		{
+			imgIndex--;
+		}
 	}
-	big_photo.src = liens[imgIndex].src; // On change l'attribut src de l'image en le remplaçant par la valeur du lien
-	big_photo.title = liens[imgIndex].title;
-	text.innerHTML = ((imgIndex+1) + '/' + liens.length);
+	picture.src = liens[imgIndex].src; // On change l'attribut src de l'image en le remplaçant par la valeur du lien
+	picture.title = liens[imgIndex].title;
+	text.innerHTML = ((imgIndex + 1) + '/' + liens.length);
 }
 
-function backwardGalery() {
-	var photos = document.getElementById('galerie_mini');
-  	var liens = photos.getElementsByTagName('img');
-	var text = document.getElementById('text-img');
-	var big_photo = document.getElementById('big_pict');
-	if(imgIndex == 0)
-	{
-		imgIndex = liens.length-1;
-	}
-	else
-	{
-		imgIndex--;
-	}
-	big_photo.src = liens[imgIndex].src; // On change l'attribut src de l'image en le remplaçant par la valeur du lien
-	big_photo.title = liens[imgIndex].title;
-	text.innerHTML = ((imgIndex+1) + '/' + liens.length);
-}
-
-loadDoc();
+window.onload = loadDoc();
