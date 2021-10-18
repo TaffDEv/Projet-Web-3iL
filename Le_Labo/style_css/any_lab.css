@@ -3,6 +3,10 @@ body
 background-color: rgba(224,238,238, 0.4);
 }
 
+#hidden
+{
+	display : none;
+}
 
 #container
 {
