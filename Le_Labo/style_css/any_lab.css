@@ -177,9 +177,22 @@ box-shadow: 10px 20px 20px 0px rgba(81, 61, 61, 0.3);
     box-shadow: 10px 30px 30px 0px rgba(23, 12, 12, 0.3);
 }
 
-:hover .rédaq{
-    /*color: aquamarine;*/
+#big_pict{
+    width: 500px;
+    height: 450px;
+}
 
+#playerJS{
+
+  position: relative;
+    padding: 10px;
+    top: 0; bottom: 0;
+    left: 0; right: 0;
+    width: 600px;
+    height: 450px;
+    max-width: 100%;
+    max-height: 100%;
+    background-color: green; 
 }
 
 #diaporama

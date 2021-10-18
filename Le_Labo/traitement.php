@@ -7,7 +7,7 @@ $bdd = new PDO("mysql:host=127.0.0.1;dbname=espace_membres;charset=utf8","root",
 if(isset($_POST['submit']))
 	{
 		if(isset($_POST['id'],$_POST['mail'],$_POST['mail2'],$_POST['mdp'],$_POST['mdp2']))
-	// Si les cases comme pseudo ne sont pas vide on ne fait rien, la ligne d'au-dessus "selectionne" les cases comme pseudo etc.. et verifie si celles-ci sont vide, si c'est le cas il affiche le message d'error (voir else)	
+	// Si les cases comme pseudo ne sont pas vide on ne fait rien, la ligne d'au-dessus "selectionne" les cases comme pseudo etc.. et verifie si celles-ci sont vides, si c'est le cas il affiche le message d'error (voir else)	
 		{
 			if(!empty($_POST['id']) AND !empty($_POST['mail']) AND !empty($_POST['mail2']) AND !empty($_POST['mdp']) AND !empty($_POST['mdp2'])) 
 			{
