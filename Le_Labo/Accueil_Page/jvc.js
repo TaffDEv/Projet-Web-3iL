@@ -2,6 +2,12 @@ var imgIndex = 0;
 var main = null;
 var hidden = null;
 
+function initConnexion() {
+	var connexion = document.getElementById('connexion');
+	var main = document.getElementById('main');
+	main.innerHTML = connexion.innerHTML;	
+}
+
 function initGalery() {
 
 

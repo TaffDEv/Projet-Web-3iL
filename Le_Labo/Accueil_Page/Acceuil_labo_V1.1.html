@@ -35,11 +35,12 @@
 			
 			<div id="zone_co">
 						
-					<a href="http://localhost/Le_Labo/login.php" target="_blank"> Se connecter </a>
+					<a onclick=initConnexion()> Connexion </a>
+					<!-- <a href="http://localhost/Le_Labo/login.php" target="_blank"> Se connecter </a> -->
 						
 						</br>
 						
-					<a href="http://localhost/Le_Labo/formulaire_inscription.php" target="_blank"> Inscription </a>
+					<!-- <a href="http://localhost/Le_Labo/formulaire_inscription.php" target="_blank"> Inscription </a> -->
 						
 					<!-- placer ici liens pour se co -->
 				
@@ -93,6 +94,49 @@
 
 	
 	<div id='hidden'>
+
+		<div id = 'connexion'> 
+
+			<form action="traitement.php" method="post">
+			
+				<table>
+					
+					<tr>
+						<td align="right">				
+							<label for="identifiant" > Nom Admin : </label>							
+						</td>
+						
+						<td>
+							<input type="text" placeholder="Pseudo" name="id" title="les caractères telle que '*' '#' etc... ne sont pas autorisés"/>
+						</td>					
+					</tr>								
+		
+					<tr>				
+						<td align="right">				
+							<label for="mdp"> Mot de Passe : </label>							
+						</td>
+		
+						<td>
+							<input type="password" placeholder="Mot de Passe" name="mdp"/>
+						</td>	
+					</tr>				
+		
+					<tr>
+						<td align="right">				
+						</td>
+					
+						<td>
+							<input type="submit" name="submit" value="Se Connecter">
+						</td>	
+					</tr>		
+							
+				</table>	
+			</form>	
+
+		</div>
+		
+			<!-- fin div connexion -->
+
 		<div id = 'accueil'>
 			Ceci est l'accueil
 		</div>
@@ -103,8 +147,8 @@
 					<!--<div class="text"> -->
 				<li class="bulle">
 
-					<!--  <img class="articles" src="../Accueil_Page/smartpic/Le-Galaxy-S8.png" alt="NEWS S8"> -->
-					<img class="articles" src="../Accueil_Page/smartpic/Le-Galaxy-S8.png" alt="NEWS S8">
+					<!--  <img class="imgarticles" src="../Accueil_Page/smartpic/Le-Galaxy-S8.png" alt="NEWS S8"> -->
+					<img class="imgarticles" src="../Accueil_Page/smartpic/Le-Galaxy-S8.png" alt="NEWS S8">
 
 					<p class="rédaq" >
 
@@ -121,7 +165,7 @@
 				<li class="bulle">					
 
 						<!-- <hr style="clear:both; visibility: hidden;" /> -->	
-						<img class="articles" src="../Accueil_Page/smartpic/Le-Galaxy-S8.png" alt="NEWS S8">
+						<img class="imgarticles" src="../Accueil_Page/smartpic/Le-Galaxy-S8.png" alt="NEWS S8">
 
 					<p class="rédaq" >
 
@@ -153,11 +197,9 @@
 				
 				<li class="bulle">
 
-					<img class="articles" src="../Accueil_Page/smartpic/Le-Galaxy-S8.png" alt="NEWS S8">
+					<img class="imgarticles" src="../Accueil_Page/smartpic/Le-Galaxy-S8.png" alt="NEWS S8">
 
 					<p class="rédaq" >
-
-						
 
 						&nbsp;&nbsp;
 						Annoncée il y a bientôt 1 an, la nouvelle console de Microsoft continue de faire fantasmer les 
@@ -171,7 +213,7 @@
 
 				<li class="bulle">
 
-					<img class="articles" src="../Accueil_Page/smartpic/Le-Galaxy-S8.png" alt="NEWS S8">
+					<img class="imgarticles" src="../Accueil_Page/smartpic/Le-Galaxy-S8.png" alt="NEWS S8">
 
 					<p class="rédaq" >
 
