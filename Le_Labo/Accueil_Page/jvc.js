@@ -37,19 +37,6 @@ function initBlog() {
 	main.innerHTML = blog.innerHTML;
 }
 
-
-
-function loadDoc() {
-  var xhttp = new XMLHttpRequest();
-  xhttp.onreadystatechange = function() {
-    if (this.readyState == 4 && this.status == 200) {
-      document.getElementById('galerie_mini').innerHTML = this.responseText;
-    }
-  };
-  xhttp.open("GET", "data2.xml", true);
-  xhttp.send();
-}
-
 function changePhoto(par1) {
 	var photos = document.getElementById('galerie_mini');
   	var liens = photos.getElementsByTagName('img');
