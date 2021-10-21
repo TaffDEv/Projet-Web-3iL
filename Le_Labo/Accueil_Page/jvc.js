@@ -1,6 +1,4 @@
 var imgIndex = 0;
-var main = null;
-var hidden = null;
 
 function initConnexion() {
 	var connexion = document.getElementById('connexion');
@@ -9,8 +7,6 @@ function initConnexion() {
 }
 
 function initGalery() {
-
-
 	var galery = document.getElementById('playerJS');
 	var main = document.getElementById('main');
 	main.innerHTML = galery.innerHTML;
@@ -35,16 +31,10 @@ function initAccueil() {
 	main.innerHTML = accueil.innerHTML;
 }
 
-function loadDoc() {
-  var xhttp = new XMLHttpRequest();
-  xhttp.onreadystatechange = function() {
-    if (this.readyState == 4 && this.status == 200) {
-      document.getElementById('galerie_mini').innerHTML = this.responseText;
-    }
-  };
-  xhttp.open("GET", "data2.xml", true);
-  xhttp.send();
-
+function initBlog() {
+	var blog = document.getElementById('blog');
+	var main = document.getElementById('main');
+	main.innerHTML = blog.innerHTML;
 }
 
 function changePhoto(par1) {
@@ -79,4 +69,21 @@ function changePhoto(par1) {
 	text.innerHTML = ((imgIndex + 1) + '/' + liens.length);
 }
 
-window.onload = loadDoc();
+function loadDoc() {
+  var xhttp = new XMLHttpRequest();
+  xhttp.onreadystatechange = function() {
+    if (this.readyState == 4 && this.status == 200) {
+      document.getElementById('galerie_mini').innerHTML = this.responseText;
+    }
+  };
+  xhttp.open("GET", "data2.xml", true);
+  xhttp.send();
+}
+
+async function initDocument() {
+	await new Promise(resolve => setTimeout(resolve, 5)); //Sleep 5ms
+	loadDoc();
+	initAccueil();
+}
+
+window.onload = initDocument();
