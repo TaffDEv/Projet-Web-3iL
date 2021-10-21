@@ -1,25 +1,6 @@
 
-/*#playerJS
-{
-    position: relative;
-    padding: 10px;
-    top: 0; bottom: 0;
-    left: 0; right: 0;
-    width: 600px;
-    height: 450px;
-    max-width: 100%;
-    max-height: 100%;
-    background-color: green; 
-}*/
 
 #galerie_mini
-{
-  margin: 0 ;
-  padding: 0 ;
-  list-style-type: none ;
-}
-
-#galerie_mini li
 {
   display: none;
 }
@@ -28,7 +9,7 @@
 #photo
 {
   clear: both ;
-  margin: 0 auto ;
+  margin: 0 auto ;  
 }
 
 #photo dt

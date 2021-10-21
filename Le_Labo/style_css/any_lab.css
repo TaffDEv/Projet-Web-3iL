@@ -182,14 +182,31 @@ nav li
     box-shadow: 10px 30px 30px 0px rgba(23, 12, 12, 0.3);
 }
 
-#big_pict{
-    width: 500px;
-    height: 450px;
+.bulle td{
+    padding: 10px;
+}
+
+.case_message{
+    width: 450px;
+    height: 150px;
+}
+
+#photo{
+    text-align: center;
+    width: auto;
+    height: auto; 
+     font-size: 15px;
+    Font-Weight: Bold;
+}
+
+#picture{
+     width: 100%;
+     height: 95%;
 }
 
 #playerJS{
 
-  position: relative;
+    position: relative;
     padding: 10px;
     top: 0; bottom: 0;
     left: 0; right: 0;

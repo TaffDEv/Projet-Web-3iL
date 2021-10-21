@@ -35,6 +35,14 @@ function initAccueil() {
 	main.innerHTML = accueil.innerHTML;
 }
 
+function initBlog() {
+	var blog = document.getElementById('blog');
+	var main = document.getElementById('main');
+	main.innerHTML = blog.innerHTML;
+}
+
+
+
 function loadDoc() {
   var xhttp = new XMLHttpRequest();
   xhttp.onreadystatechange = function() {
