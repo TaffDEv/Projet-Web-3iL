@@ -1,3 +1,6 @@
+<?php
+session_start();
+?>
 <!DOCTYPEHTML>
 
 <html lang="fr">
@@ -38,14 +41,12 @@
 			
 			<div id="zone_co">
 						
-					<a onclick=initConnexion()> Connexion </a>
-					<!-- <a href="http://localhost/Le_Labo/login.php" target="_blank"> Se connecter </a> -->
-						
-						</br>
-						
-					<!-- <a href="http://localhost/Le_Labo/formulaire_inscription.php" target="_blank"> Inscription </a> -->
-						
-					<!-- placer ici liens pour se co -->
+			<h1> 
+				<?
+					$_SESSION['user_id'] = $user_id;
+					$_SESSION['user_name'] = $user_name;
+				?>
+			 </h1> 
 				
 			</div>
 				
@@ -100,7 +101,7 @@
 
 		<div id = 'connexion'> 
 
-			<form action="traitement.php" method="post">
+			<form action="traitement_log.php" method="post" class="bulle">
 			
 				<table>
 					
@@ -131,16 +132,27 @@
 						<td>
 							<input type="submit" name="submit" value="Se Connecter">
 						</td>	
-					</tr>		
-							
+					</tr>	
 				</table>	
 			</form>	
+
+			<?php 
+				if(isset($_GET['error'])) {echo$_GET['error'];}
+				// si présence de 'error' dans url, alors on affiche l'error, s'effectue grâce à "$_GET"
+			?>
 
 		</div>
 		
 			<!-- fin div connexion -->
 
 		<div id = 'accueil'>
+
+		<h1> <?
+					$_SESSION['user_id'] = $user_id;
+					$_SESSION['user_name'] = $user_name;
+
+					echo $user_name;
+				?> </h1> 
 			Ceci est l'accueil
 		</div>
 
@@ -237,21 +249,15 @@
 		</div>
 
 		<div id = 'blog'>
-
-			<ul> 
-
-				<li class="bulle">
-
-				</li>
-
-				<li class="bulle">
-
-				</li>
-
-			</ul>
-
-			<form action="messageBlog.php" method="post" class="bulle">
 			
+			<form action="messageBlog.php" method="post" class="bulle">
+
+			<div class="alert alert-primary" role="alert">
+
+				<?php=echo$_GET['error'] ?>
+
+			</div>
+				
 				<table>
 					
 					<tr>
@@ -261,7 +267,7 @@
 						</td>
 						
 						<td>
-							<input type='text' name='user' placeholder='username' title='les caractères spéciaux ne sont pas autorisés'>
+							<input type='text' name='user' placeholder='Pseudo' title='les caractères spéciaux ne sont pas autorisés'>
 						</td>
 
 					</tr>
@@ -273,7 +279,7 @@
 						</td>
 						
 						<td>
-							<input type='text' name='contenu' placeholder='message' class='case_message'>
+							<textarea class='case_message' type='text' name='contenu'> </textarea>
 						</td>
 
 					</tr>
@@ -283,16 +289,13 @@
 						</td>
 					
 						<td>
-							<input type='submit' name='submit' value='Envoyer'>
+							<input type='submit' name='submit' value='Envoyer' />
 						</td>	
 					</tr>		
 							
 				</table>	
 
-			</form>
-
-
-			
+			</form>				
 
 		</div>
 			<!-- fin div Blog-->
