@@ -35,6 +35,29 @@ function initBlog() {
 	var blog = document.getElementById('blog');
 	var main = document.getElementById('main');
 	main.innerHTML = blog.innerHTML;
+
+
+	var msg = document.getElementById('bulleTab');
+	msg.innerHTML = "";
+	var xhttp = new XMLHttpRequest();
+  	xhttp.onreadystatechange = function() {
+	    if (this.readyState == 4 && this.status == 200) {
+	    	var data = JSON.parse(this.responseText);
+	    	var html = "";
+	    	for(var index = 0; index < data.length; index++) {
+	    		var user = data[index].user;
+	    		var contenu = data[index].contenu;
+	    		html += '<li>user : ' + user + '<p/>message : ' + contenu + '</li>';
+			}
+	    	msg.innerHTML = html;//'<li>' + this.responseText + '</li>';
+	    }
+	  };
+	  xhttp.open("GET", "gestionBlog.php?q=1", true);
+	  xhttp.send();
+
+	msg.innerHTML = '<li> RJAKJRA </li>';
+
+
 }
 
 function changePhoto(par1) {

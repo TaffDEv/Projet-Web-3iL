@@ -134,6 +134,23 @@ nav li
     /*background-color: green;*/
 }
 
+#bulleTab li
+{
+	list-style: none;
+    background-color: snow;
+    padding: 30px;
+    width: auto;
+    height: auto;
+    margin-top: 50px;
+    margin-bottom: 80px;
+    position: relative;
+    /*margin-left: 30px;*/
+    font-size: 25px;
+    Font-Weight: Bold;
+    color: Black;
+    border-radius: 20px;
+    box-shadow: 10px 20px 20px 0px rgba(81, 61, 61, 0.3);
+}
 .bulle
 {
     list-style: none;

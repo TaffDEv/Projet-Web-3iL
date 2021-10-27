@@ -11,7 +11,6 @@
 	<script src="jvc.js" type="text/javascript"></script>
 
 
-	<link href="messageBlog.php" rel="stylesheet"/>
 
 	<title>Labo Tech</title>
 
@@ -241,53 +240,8 @@
 		</div>
 
 		<div id = 'blog'>
-			
-			<form action="messageBlog.php" method="post" class="bulle">
 
-			<div class="alert" role="alert">
-
-				<?php=echo$_GET['error'] ?>
-
-			</div>
-				
-				<table>
-					
-					<tr>
-
-						<td align="right">				
-							<label> Nom Utilisateur : </label>							
-						</td>
-						
-						<td>
-							<input type='text' name='user' placeholder='Pseudo' title='les caractères spéciaux ne sont pas autorisés'>
-						</td>
-
-					</tr>
-
-					<tr>
-
-						<td align="right">
-							<label> Message : </label>							
-						</td>
-						
-						<td>
-							<textarea class='case_message' type='text' name='contenu'> </textarea>
-						</td>
-
-					</tr>
-		
-					<tr>
-						<td align="right">				
-						</td>
-					
-						<td>
-							<input type='submit' name='submit' value='Envoyer' />
-						</td>	
-					</tr>		
-							
-				</table>	
-
-			</form>				
+			<?php include('blog.php') ?>
 
 		</div>
 			<!-- fin div Blog-->
