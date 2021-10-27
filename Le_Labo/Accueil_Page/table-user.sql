@@ -5,4 +5,4 @@ CREATE TABLE `blog`.`users` (
     PRIMARY KEY (`id`)) ENGINE = InnoDB; 
 )
 
-INSERT INTO `users` (`id`, `name`, `password`) VALUES (NULL, 'Admin', SHA1('123456')) 
+INSERT INTO `users` (`id`, `name`, `password`) VALUES (NULL, 'Admin', SHA1('123456'));

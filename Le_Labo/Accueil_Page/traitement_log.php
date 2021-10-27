@@ -24,7 +24,9 @@ session_start();
                     $_SESSION['user_name'] = $user_name;
                     $_SESSION['user_mdp'] = $user_mdp;
                     
-                    header('location:Accueil_labo_V2.php');
+                    header('location:Admin_page.php');
+                    #echo "COUCOU";
+
 
                 } else {
                     echo "Mot de passe incorrecte";
@@ -38,7 +40,7 @@ session_start();
 
   else {	
 	
-    header('location:Accueil_labo_V1.1.php?error=Elements manquant');
+    header('location:Accueil_labo.php?error=Elements manquant');
 }
 
 
