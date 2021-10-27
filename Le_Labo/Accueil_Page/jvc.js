@@ -47,7 +47,8 @@ function initBlog() {
 	    	for(var index = 0; index < data.length; index++) {
 	    		var user = data[index].user;
 	    		var contenu = data[index].contenu;
-	    		html += '<li>user : ' + user + '<p/>message : ' + contenu + '</li>';
+	    		var id = data[index].id;
+	    		html += '<li>user : ' + user + '<p/>message : ' + contenu + '<p/>id : ' + id + '<button class="Button2" type="button"> Delete </button>' + '</li>';
 			}
 	    	msg.innerHTML = html;//'<li>' + this.responseText + '</li>';
 	    }

@@ -173,6 +173,27 @@ nav li
     border-radius: 20px;
     box-shadow: 10px 20px 20px 0px rgba(81, 61, 61, 0.3);
 }
+
+.Button2
+{
+    padding: 10px;
+    font-weight: bold;
+    -webkit-transition: all 0.5s;
+    -webkit-border-radius: 5px;
+    display: block;
+    background-color: snow;
+    width: 10%;
+    height: 10%;
+    text-align: center;
+    left: 15px;    
+}
+
+.Button2:hover
+{
+    color: black;
+    background:  #C70039 ;
+    cursor: pointer;
+}
 .bulle
 {
     list-style: none;

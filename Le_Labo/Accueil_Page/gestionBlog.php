@@ -15,10 +15,11 @@ class blog # Déclaration de la classe
     }
     public function lire()
     {
-        $bdd = $this->bdd->query('SELECT user, contenu FROM `message`');# WHERE id > ((SELECT MAX(id) FROM `message`) - 10)'); #recuperation
+        $bdd = $this->bdd->query('SELECT id, user, contenu FROM `message`');# WHERE id > ((SELECT MAX(id) FROM `message`) - 10)'); #recuperation
         return $bdd->fetchAll(\PDO::FETCH_ASSOC); #transformation en liste
     }
 }
+  
 
 $blog = new blog();
 

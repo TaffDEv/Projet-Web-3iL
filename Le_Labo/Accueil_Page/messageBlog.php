@@ -37,7 +37,7 @@ class blog # Déclaration de la classe
 
 
 $blog = new blog();
-echo htmlspecialchars($_POST['user']), htmlspecialchars($_POST['contenu']);
+#echo htmlspecialchars($_POST['user']), htmlspecialchars($_POST['contenu']);
 $blog->nouveau_message(htmlspecialchars($_POST['user']), htmlspecialchars($_POST['contenu']));
 	/*
 
