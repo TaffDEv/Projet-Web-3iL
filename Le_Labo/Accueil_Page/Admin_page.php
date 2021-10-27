@@ -1,3 +1,7 @@
+<?php
+	session_start();
+?>
+
 <!DOCTYPEHTML>
 
 <html lang="fr">
@@ -9,6 +13,9 @@
 	<link href="../style_css/galerie.css" rel="stylesheet"/> 
 	<link rel="shortcut icon" href="labs.png">
 	<script src="jvc.js" type="text/javascript"></script>
+
+
+	
 
 	<title>Labo Tech</title>
 
@@ -34,15 +41,26 @@
 							
 			
 			<div id="zone_co">
-						
-					<a onclick=initConnexion()> Connexion </a>
-					<!-- <a href="http://localhost/Le_Labo/login.php" target="_blank"> Se connecter </a> -->
-						
-						</br>
-						
-					<!-- <a href="http://localhost/Le_Labo/formulaire_inscription.php" target="_blank"> Inscription </a> -->
-						
-					<!-- placer ici liens pour se co -->																							
+
+				 <?php 
+				 	
+
+						if(array_key_exists("submit", $_POST)){
+							/*session_start();*/							
+							unset($_SESSION);
+							session_destroy();
+							session_write_close();
+							header('Location:Accueil_labo.php');							
+						}	
+				 ?>							
+				
+				<form method='POST'>
+
+					<input type="submit" name="submit" value="Déconnexion" class="Button">
+
+
+				</form>
+				
 			</div>
 				
 			
@@ -72,15 +90,14 @@
 			
 			<div class="pro">
 					
-				<span class="lb">	<img class="part" src="./lbt.png" width="250" height="150"/> </span>
-						<span class="lb">	
+				<span class="lb">	
 
-							<a href="Accueil_labo.php" target="blank" title="LBT Accueil"> 
-								<img class="part" src="./lbt.png" width="250" height="150"/>
-							</a> 
+					<a href="Accueil_labo.php" target="blank" title="LBT Accueil"> 
+						<img class="part" src="./lbt.png" width="250" height="150"/>
+					</a> 
 							
-						</span> 
-									
+				</span> 
+				
 				<p>
 					A propos du LaboTech. <br>
 					Le LaboTech est un site web qui traite de l'actualité High-Tech. <br>
@@ -113,7 +130,7 @@
 						</td>
 						
 						<td>
-							<input type="text" placeholder="Pseudo" name="user" title="les caractères telle que '*' '#' etc... ne sont pas autorisés"/>
+							<input type="text" placeholder="Pseudo" name="id" title="les caractères telle que '*' '#' etc... ne sont pas autorisés"/>
 						</td>					
 					</tr>								
 		
@@ -148,10 +165,23 @@
 			<!-- fin div connexion -->
 
 		<div id = 'accueil'>
-			Ceci est l'accueil
 
-			<h1> Page en manque de contenus </h1> 
-		
+		<h1> 
+				<?php
+
+					if (isset($_SESSION['user_name'])) {
+  							echo "Bonjour ".$_SESSION['user_name']." Souhaitez-vous modifier la page ?";
+  					}else{
+
+  						echo "Veuillez vous connecter";
+  					}										
+  					
+				?>
+
+				
+
+			 </h1> 
+
 		</div>
 
 		<div id = 'articles'>
@@ -247,8 +277,53 @@
 		</div>
 
 		<div id = 'blog'>
+			
+			<form action="messageBlog.php" method="post" class="bulle">
 
-			<?php include('blog.php') ?>
+			<div class="alert alert-primary" role="alert">
+
+				<?php=echo$_GET['error'] ?>
+
+			</div>
+				
+				<table>
+					
+					<tr>
+
+						<td align="right">				
+							<label> Nom Utilisateur : </label>							
+						</td>
+						
+						<td>
+							<input type='text' name='user' placeholder='Pseudo' title='les caractères spéciaux ne sont pas autorisés'>
+						</td>
+
+					</tr>
+
+					<tr>
+
+						<td align="right">
+							<label> Message : </label>							
+						</td>
+						
+						<td>
+							<textarea class='case_message' type='text' name='contenu'> </textarea>
+						</td>
+
+					</tr>
+		
+					<tr>
+						<td align="right">				
+						</td>
+					
+						<td>
+							<input type='submit' name='submit' value='Envoyer' />
+						</td>	
+					</tr>		
+							
+				</table>	
+
+			</form>				
 
 		</div>
 			<!-- fin div Blog-->

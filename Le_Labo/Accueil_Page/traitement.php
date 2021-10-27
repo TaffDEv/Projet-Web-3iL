@@ -10,7 +10,9 @@
 
 		if(strlen($user)>4 AND strlen($user)<255){	
 
-			echo $user;
+			/*echo $user;*/
+			$bdd->exec("INSERT INTO message(user, contenu) VALUES('$user', '$contenu')");
+
 		}
 		
 		else {	
