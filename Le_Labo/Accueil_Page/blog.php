@@ -13,33 +13,16 @@ class blog # Déclaration de la classe
      	}
      	$this->bdd->exec("INSERT INTO message(user, contenu) VALUES('$user', '$contenu')");
     }
-    public function lire()
-    {
-        $bdd = $this->bdd->query('SELECT user, contenu FROM `message` WHERE id > ((SELECT MAX(id) FROM `message`) - 10)'); #recuperation
-        return $bdd->fetchAll(\PDO::FETCH_ASSOC); #transformation en liste
-    }
 }
 
 $blog = new blog();
 
-
-$data = $blog->lire();
-#echo '<pre>' . print_r($data, true) .'</pre>';	//Show all data in db
-
-foreach ($data as $key => $value)
-{
-	echo $value['user'], " ", $value['contenu'], "<br/>";
-}
-
-/*
 if(array_key_exists('Envoyer', $_POST))
 {
     $blog->nouveau_message(htmlspecialchars($_POST['user']), htmlspecialchars($_POST['contenu']));
-    echo htmlspecialchars($_POST['user']), htmlspecialchars($_POST['contenu']);
+    #echo htmlspecialchars($_POST['user']), htmlspecialchars($_POST['contenu']);
 }
-#$blog->nouveau_message(htmlspecialchars($_POST['user']), htmlspecialchars($_POST['contenu']));
 
-*/
 ?>
 
 <ul id='bulleTab'> 

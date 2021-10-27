@@ -55,7 +55,7 @@ function initBlog() {
 	  xhttp.open("GET", "gestionBlog.php?q=1", true);
 	  xhttp.send();
 
-	msg.innerHTML = '<li> RJAKJRA </li>';
+	/*msg.innerHTML = '<li> RJAKJRA </li>';*/
 
 
 }
