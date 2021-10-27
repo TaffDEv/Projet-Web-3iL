@@ -46,7 +46,9 @@ if(array_key_exists('Envoyer', $_POST))
 
 </ul>
 
-<form method='POST' class="bulle">
+<iframe name="votar" style="display:none;"></iframe>
+
+<form method='POST' class="bulle"  target="votar">
 
 	<table>
 		
@@ -57,7 +59,7 @@ if(array_key_exists('Envoyer', $_POST))
 			</td>
 			
 			<td>
-				<input type='text' name='user' placeholder='username' title='les caractères spéciaux ne sont pas autorisés'>
+				<input type='text' name='user' placeholder='Pseudo' title='les caractères spéciaux ne sont pas autorisés'>
 			</td>
 
 		</tr>
@@ -69,7 +71,7 @@ if(array_key_exists('Envoyer', $_POST))
 			</td>
 			
 			<td>
-				<input type='text' name='contenu' placeholder='message' class='case_message'>
+				<textarea  type='text' name='contenu' placeholder='message' class='case_message'> </textarea>
 			</td>
 
 		</tr>
@@ -79,7 +81,7 @@ if(array_key_exists('Envoyer', $_POST))
 			</td>
 		
 			<td>
-				<input type='submit' name='Envoyer' value='Envoyer'>
+				<input type='submit' name='Envoyer' value='Envoyer' style="padding: 10px;">
 			</td>	
 		</tr>		
 				

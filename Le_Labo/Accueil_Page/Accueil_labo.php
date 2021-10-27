@@ -71,8 +71,7 @@
 		<div id="footer"> 
 			
 			<div class="pro">
-					
-				<span class="lb">	<img class="part" src="./lbt.png" width="250" height="150"/> </span>
+									
 						<span class="lb">	
 
 							<a href="Accueil_labo.php" target="blank" title="LBT Accueil"> 
