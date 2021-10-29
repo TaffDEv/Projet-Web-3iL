@@ -51,9 +51,8 @@
 		<!-- la div topbar se termine ici -->
 
 		<nav> 
-				<ul>
-					<ul class="bip"> <li> <a class="bip7" onclick=initAccueil()> Accueil </a></li> </ul>
-					<ul class="bip"> <li> <a class="bip7" onclick=initArticles()> Articles </a></li> </ul>
+				<ul class="navlib">
+					<ul class="bip"> <li> <a class="bip7" onclick=initAccueil()> Accueil </a></li> </ul>					
 					<ul class="bip"> <li> <a class="bip7" onclick=initBlog('Visiteur')> Blog </a></li> </ul>
 					<ul class="bip"> <li> <a class="bip7" onclick=initGalery()> Photos </a></li> </ul>
 				</ul>	
@@ -147,103 +146,83 @@
 			<!-- fin div connexion -->
 
 		<div id = 'accueil'>
-			Ceci est l'accueil
 
-			<h1> Page en manque de contenus </h1> 
-		
-		</div>
-
-		<div id = 'articles'>
-				
 			<div id="columnright">  			
-					<!--<div class="text"> -->
-				<li class="bulle">
+						<!--<div class="text"> -->
+					<li class="bulle">
 
-					<!--  <img class="imgarticles" src="../Accueil_Page/smartpic/Le-Galaxy-S8.png" alt="NEWS S8"> -->
-					<img class="imgarticles" src="../Accueil_Page/smartpic/Le-Galaxy-S8.png" alt="NEWS S8">
-
-					<p class="rédaq" >
-
-						&nbsp;&nbsp;
-						Après une crise difficile, Samsung lance son nouveau vaisseau-amiral, le Galaxy S8 et son grand frère, 
-						le S8+. Cette fois-ci, les bords sont incurvés sur les deux modèles. 
-						Et le lecteur de cartes MicroSD est de retour. 						
-						<a href="../pagesco/galaxyS8.html" target="blank" title="NEWS S8"> Lire la suite.. </a>
 						
-					</p>
-					
-				</li>
+						<p class="rédaq" >
 
-				<li class="bulle">					
-
-						<!-- <hr style="clear:both; visibility: hidden;" /> -->	
-						<img class="imgarticles" src="../Accueil_Page/smartpic/Le-Galaxy-S8.png" alt="NEWS S8">
-
-					<p class="rédaq" >
-
-						&nbsp;&nbsp;
-						Asus ne laisse guère de créneau inoccupé sur le marché informatique. Cartes mères, cartes graphiques,
-						écrans, claviers, souris, PC portables et mini PC gaming, comme le GR8.
-						Après une crise difficile, Samsung lance son nouveau vaisseau-amiral, le Galaxy S8 et son grand frère, 
-						le S8+. Cette fois-ci, les bords sont incurvés sur les deux modèles. 
-						Et le lecteur de cartes MicroSD est de retour. 						
-						<a href="../Accueil_Page/pagesco/galaxyS8.html" target="blank" title="NEWS S8"> Lire la suite.. </a>
-
-					</p>
-
-				</li>						
-					<!--</div>-->
-				
-				<div id="diaporama">
-					
-					<figure>
+							&nbsp;&nbsp;
+							Après une crise difficile, Samsung lance son nouveau vaisseau-amiral, le Galaxy S8 et son grand frère, 
+							le S8+. Cette fois-ci, les bords sont incurvés sur les deux modèles. 
+							Et le lecteur de cartes MicroSD est de retour. 						
+							
+						</p>
 						
-						<a href="../pagesco/galaxyS8.html" target="blank" title="NEWS S8"> <img src="../Accueil_Page/smartpic/Le-Galaxy-S8.png" alt="NEWS S8"> </a>
-						<a href="../pagesco/Asus Rog GR8.html" target="blank" title="ROG GR8"> <img src="../Accueil_Page/smartpic/ASUS_Rogue.png" alt="ROG GR8"> </a>
-						<img src="../Accueil_Page/smartpic/X-Box Scorpio.png">
-						<img src="../Accueil_Page/smartpic/Pebble Steel.png">
+					</li>
+
+					<li class="bulle">					
+
+						
+						<p class="rédaq" >
+
+							&nbsp;&nbsp;
+							Asus ne laisse guère de créneau inoccupé sur le marché informatique. Cartes mères, cartes graphiques,
+							écrans, claviers, souris, PC portables et mini PC gaming, comme le GR8.
+							Après une crise difficile, Samsung lance son nouveau vaisseau-amiral, le Galaxy S8 et son grand frère, 
+							le S8+. Cette fois-ci, les bords sont incurvés sur les deux modèles. 
+							Et le lecteur de cartes MicroSD est de retour. 						
+							
+						</p>
+
+					</li>						
+						<!--</div>-->
 					
-					</figure>
-				
+					<div id="diaporama">
+						
+						<figure>
+							
+							<a href="../pagesco/galaxyS8.html" target="blank" title="NEWS S8"> <img src="../Accueil_Page/smartpic/Le-Galaxy-S8.png" alt="NEWS S8"> </a>
+							<a href="../pagesco/Asus Rog GR8.html" target="blank" title="ROG GR8"> <img src="../Accueil_Page/smartpic/ASUS_Rogue.png" alt="ROG GR8"> </a>
+							<img src="../Accueil_Page/smartpic/X-Box Scorpio.png">
+							<img src="../Accueil_Page/smartpic/Pebble Steel.png">
+						
+						</figure>
+					
+					</div>
+					
+					<li class="bulle">
+
+						
+						<p class="rédaq" >
+
+							&nbsp;&nbsp;
+							Annoncée il y a bientôt 1 an, la nouvelle console de Microsoft continue de faire fantasmer les 
+							uns et les autres sans qu’aucune vraie info tangible et officielle n’ait filtré depuis. C’est un tour de force de communication 
+							mais à quelques mois de l’E3, c’est trop peu pour les joueurs. 
+							
+						</p>
+
+					</li>
+
+					<li class="bulle">
+						
+						<p class="rédaq" >
+
+							&nbsp;&nbsp;
+							La plateforme de la Pebble ne dément pas son succès depuis le lancement du premier modèle début 2013, 
+							désormais, il y a un App store vous permettant d’installer des « Watch faces » personnalisées et des applications 
+							vous permettant de vous enregistrer sur Foursquare ou acheter un café chez Starbucks.
+							
+						</p>
+					</li>
 				</div>
+					<!-- fin div columnright -->
 				
-				<li class="bulle">
-
-					<img class="imgarticles" src="../Accueil_Page/smartpic/Le-Galaxy-S8.png" alt="NEWS S8">
-
-					<p class="rédaq" >
-
-						&nbsp;&nbsp;
-						Annoncée il y a bientôt 1 an, la nouvelle console de Microsoft continue de faire fantasmer les 
-						uns et les autres sans qu’aucune vraie info tangible et officielle n’ait filtré depuis. C’est un tour de force de communication 
-						mais à quelques mois de l’E3, c’est trop peu pour les joueurs. 
-						<a href="../Accueil_Page/pagesco/galaxyS8.html" target="blank" title="NEWS S8"> Lire la suite.. </a>
-
-					</p>
-
-				</li>
-
-				<li class="bulle">
-
-					<img class="imgarticles" src="../Accueil_Page/smartpic/Le-Galaxy-S8.png" alt="NEWS S8">
-
-					<p class="rédaq" >
-
-						&nbsp;&nbsp;
-						La plateforme de la Pebble ne dément pas son succès depuis le lancement du premier modèle début 2013, 
-						désormais, il y a un App store vous permettant d’installer des « Watch faces » personnalisées et des applications 
-						vous permettant de vous enregistrer sur Foursquare ou acheter un café chez Starbucks.
-						<a href="../Accueil_Page/pagesco/galaxyS8.html" target="blank" title="NEWS S8"> Lire la suite.. </a>
-
-					</p>
-
-
-				</li>					
-					
-				
+			
 			</div>
-				<!-- fin div columnright -->		
-		</div>
 
 		<div id = 'blog'>
 
@@ -269,7 +248,10 @@
 					    >
 					</button>
 
-				  </dl>					
+				  </dl>
+
+
+					
 		</div>	
 	</div>
 
