@@ -54,7 +54,7 @@
 				<ul>
 					<ul class="bip"> <li> <a class="bip7" onclick=initAccueil()> Accueil </a></li> </ul>
 					<ul class="bip"> <li> <a class="bip7" onclick=initArticles()> Articles </a></li> </ul>
-					<ul class="bip"> <li> <a class="bip7" onclick=initBlog()> Blog </a></li> </ul>
+					<ul class="bip"> <li> <a class="bip7" onclick=initBlog('Visiteur')> Blog </a></li> </ul>
 					<ul class="bip"> <li> <a class="bip7" onclick=initGalery()> Photos </a></li> </ul>
 				</ul>	
 		</nav>
@@ -269,10 +269,7 @@
 					    >
 					</button>
 
-				  </dl>
-
-
-					
+				  </dl>					
 		</div>	
 	</div>
 

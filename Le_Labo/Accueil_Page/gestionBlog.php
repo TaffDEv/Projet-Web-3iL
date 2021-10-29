@@ -13,6 +13,9 @@ class blog # Déclaration de la classe
      	}
      	$this->bdd->exec("INSERT INTO message(user, contenu) VALUES('$user', '$contenu')");
     }
+    public function supprime_message($id) {
+    	$this->bdd->exec("DELETE FROM message WHERE id = $id");
+    }
     public function lire()
     {
         $bdd = $this->bdd->query('SELECT id, user, contenu FROM `message`');# WHERE id > ((SELECT MAX(id) FROM `message`) - 10)'); #recuperation
@@ -23,18 +26,27 @@ class blog # Déclaration de la classe
 
 $blog = new blog();
 
-
-#foreach ()
-#{
-#	echo $value['user'], " ", $value['contenu'], "<br/>";
-#}
-
-// get the q parameter from URL
+// et the q parameter from URL
 $q = $_REQUEST["q"];
 $hint = "";
-// lookup all hints from array if $q is different from ""
-$hint = $blog->lire();
-// Output "no suggestion" if no hint was found or output correct values
-echo json_encode($hint === "" ? "no msg found" : $hint);
+
+if($q === "Lire")
+{
+	// lookup all hints from array if $q is different from ""
+	$hint = $blog->lire();
+	// Output "no suggestion" if no hint was found or output correct values
+	echo json_encode($hint === "" ? "no msg found" : $hint);
+}
+else if($q === "Envoyer")
+{
+	$user = $_REQUEST["u"];
+	$contenu = $_REQUEST["c"];
+    $blog->nouveau_message(htmlspecialchars($user), htmlspecialchars($contenu));
+}
+else if($q === "Supprimer")
+{
+	$id = $_REQUEST["id"];
+	$blog->supprime_message($id);
+}
 
 ?>

@@ -1,37 +1,7 @@
-<?php
+<div class = "bulle">
+	<ul id='bulleTab'>
 
-class blog # Déclaration de la classe
-{
-    public $bdd;
-    public function __construct(){
-        $this->bdd = new PDO('mysql:host=localhost;dbname=blog;charset=utf8', 'root', ''); #connexion à la base de donnée
-    }
-    public function nouveau_message($user, $contenu) {
-        if(empty($user) or empty($contenu)) {
-         	echo "argument missing";
-         	return;
-     	}
-     	$this->bdd->exec("INSERT INTO message(user, contenu) VALUES('$user', '$contenu')");
-    }
-}
-
-$blog = new blog();
-
-if(array_key_exists('Envoyer', $_POST))
-{
-    $blog->nouveau_message(htmlspecialchars($_POST['user']), htmlspecialchars($_POST['contenu']));
-    #echo htmlspecialchars($_POST['user']), htmlspecialchars($_POST['contenu']);
-}
-
-?>
-
-<ul id='bulleTab'> 
-
-</ul>
-
-<iframe name="votar" style="display:none;"></iframe>
-
-<form method='POST' class="bulle"  target="votar">
+	</ul>
 
 	<table>
 		
@@ -42,7 +12,7 @@ if(array_key_exists('Envoyer', $_POST))
 			</td>
 			
 			<td>
-				<input type='text' name='user' placeholder='Pseudo' title='les caractères spéciaux ne sont pas autorisés'>
+				<input id='user' type='text' name='user' placeholder='Pseudo' title='les caractères spéciaux ne sont pas autorisés'>
 			</td>
 
 		</tr>
@@ -54,7 +24,7 @@ if(array_key_exists('Envoyer', $_POST))
 			</td>
 			
 			<td>
-				<textarea  type='text' name='contenu' placeholder='message' class='case_message'> </textarea>
+				<textarea  id='contenu' type='text' name='contenu' placeholder='message' class='case_message'> </textarea>
 			</td>
 
 		</tr>
@@ -64,10 +34,9 @@ if(array_key_exists('Envoyer', $_POST))
 			</td>
 		
 			<td>
-				<input type='submit' name='Envoyer' value='Envoyer' style="padding: 10px;">
+				<input type='submit' name='Envoyer' onclick=envoyerBlogMsg() style="padding: 10px;">
 			</td>	
 		</tr>		
-				
-	</table>	
+	</table>
+</div>
 
-</form>	
