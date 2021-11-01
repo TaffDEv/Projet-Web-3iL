@@ -1,6 +1,7 @@
 body
 {
     background-color: rgba(224,238,238, 0.4);
+    /*display: flex;*/
 }
 
 #hidden
@@ -92,7 +93,7 @@ body
 #zone_co a 
 {
     font-family: Calibri, Arial;
-    font-size: 20px;
+    font-size: 2em;
     text-decoration: none;
     cursor: pointer;
 }
@@ -118,25 +119,37 @@ nav
 {
     width: auto; 
     height: auto;
-    position: relative;
+    /*position: relative;*/
     background-color: snow;
     font-size: 2em;
     word-spacing: 100%;
     text-transform: uppercase;
+    /*display: flex;*/
 }
 
 nav li
 {
-    margin-left: 130px ;
+    /*margin-left: 10px ;*/
+    padding: 25px;
     list-style: none;
     width: auto;
     height: auto;
-    cursor: pointer;
+    cursor: pointer;    
+     
+}
+
+.navlib
+{
+    display: flex;
+    justify-content: center;
 }
 
 .bip{
-    padding: 10px;
-    display: inline-block;    
+    /*padding: 5px;*/
+    display: inline-block;
+    /*background-color: #3C378B;*/  
+    margin-left: 25px ;
+    margin-right: 25px ;
 }
 
 .bip7{
@@ -171,21 +184,22 @@ nav li
     font-weight: bold;
     color: black;
     border-radius: 20px;
-    box-shadow: 10px 20px 20px 0px rgba(81, 61, 61, 0.3);
+    box-shadow: 10px 20px 20px 0px rgba(185, 220, 254, 1);
 }
 
 .Button2
 {
     padding: 10px;
-    font-weight: bold;
     -webkit-transition: all 0.5s;
-    -webkit-border-radius: 5px;
-    display: block;
+    -webkit-border-radius: 10px;
+    /*display: flex;*/
     background-color: snow;
     width: 10%;
     height: 10%;
     text-align: center;
-    left: 15px;    
+    align-content: center;
+
+    
 }
 
 .Button2:hover
@@ -194,6 +208,27 @@ nav li
     background:  #C70039 ;
     cursor: pointer;
 }
+
+.Button3
+{
+    padding: 10px;
+    -webkit-transition: all 0.5s;
+    -webkit-border-radius: 10px;
+    /*display: flex;*/
+    background-color: snow;
+    width: 10%;
+    height: 10%;
+    align-content: center;
+    display: flex;
+}
+
+.Button3:hover
+{
+    color: black;
+    background:  #C70039 ;
+    cursor: pointer;
+}
+
 .bulle
 {
     list-style: none;
@@ -204,7 +239,6 @@ nav li
     margin-top: 50px;
     margin-bottom: 80px;
     position: relative;
-    /*margin-left: 30px;*/
     font-size: 25px;
     font-weight: bold;
     color: black;
@@ -213,33 +247,14 @@ nav li
 }
 
 .rédaq{
-    padding: 15px;
+    padding: 5px;
     position: relative;
     width: auto;
-    height: auto;
-   /*background-color: green;*/
-    /*display: inline-block;*/
-    margin-left: 190px;
-    margin-top: -180px;
-   
+    height: auto;    
 }
 
 .rédaq a{
     color: black;
-}
-
-.imgarticles{
-    position: relative;
-    padding: 5px;
-    width: 170px;
-    height: 170px;
-    /*margin-left: 11px;
-    margin-top: 10px; */
-    border-radius: 20px; 
-    margin-bottom: 10px;
-    /*background-color: blue;*/
-    border: 5px solid mediumspringgreen;
-    box-shadow: 10px 30px 30px 0px rgba(23, 12, 12, 0.3);
 }
 
 .bulle td{
@@ -320,6 +335,14 @@ nav li
     100%{top: -300%;}
 }
 
+.case_message2
+{    
+
+    width: 50%;
+    height: 70%;
+
+}
+
 
 #footer
 {
@@ -355,3 +378,59 @@ nav li
 a:link{color: red; text-decoration: none;}
 a:visited{color:  #865ab9  ;}
 a:hover{color: DodgerBlue;}
+
+/* Nouvelles règles si la fenêtre fait au plus 1024px de large */
+@media screen and (max-width: 1024px)
+{
+    #container
+    {
+        width: 700px;
+        height: 100%;        
+    }
+
+    #zone_co a 
+    {
+        font-family: Calibri, Arial;
+        font-size: 1em;
+        text-decoration: none;
+        cursor: pointer;
+    }
+
+    nav li
+    {
+        /*margin-left: 130px;*/
+        list-style: none;
+        width: auto;
+        height: auto;
+        cursor: pointer;
+    }
+
+    .bip{
+        padding: 5px;
+        display: inline-block;
+        margin-left: 25px ;
+        margin-right: 25px ;
+    }
+
+    #diaporama
+    {
+      display: none;
+    }
+
+    .pro p 
+    {
+        position: relative;
+        text-align: justify;
+        /*display: inline-block;*/
+        Font-Weight: Bold;
+        font-family: Calibri, Arial;
+        font-size: 1em;
+        margin-bottom: 10px;
+    }
+
+    #footer .lb
+    {
+        display: none;
+    }
+
+}

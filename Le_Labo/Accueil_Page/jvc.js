@@ -6,6 +6,14 @@ function initConnexion() {
 	main.innerHTML = connexion.innerHTML;	
 }
 
+function CreateArticle() {
+	var div = document.createElement('li');
+	div.innerHTML = "<textarea  id='contenu' type='text' name='contenu' class='case_message2'> </textarea>" + " <input type='submit' name='Ajouter' onclick=envoyerBlogMsg() style='padding: 10px; margin-left: 10px;'> </input>";
+	// better to use CSS though - just set class
+	div.setAttribute('class', 'bulle'); // and make sure myclass has some styles in css
+	document.getElementById("bulle2").appendChild(div);	
+}
+
 function initGalery() {
 	var galery = document.getElementById('playerJS');
 	var main = document.getElementById('main');
@@ -19,23 +27,16 @@ function initGalery() {
 	text.innerHTML = ((imgIndex + 1) + '/' + liens.length);
 }
 
-function initArticles() {
-	var articles = document.getElementById('articles');
-	var main = document.getElementById('main');
-	main.innerHTML = articles.innerHTML;
-}
-
 function initAccueil() {
 	var accueil = document.getElementById('accueil');
 	var main = document.getElementById('main');
 	main.innerHTML = accueil.innerHTML;
 }
 
-function initBlog() {
+function initBlog(userType) {
 	var blog = document.getElementById('blog');
 	var main = document.getElementById('main');
 	main.innerHTML = blog.innerHTML;
-
 
 	var msg = document.getElementById('bulleTab');
 	msg.innerHTML = "";
@@ -48,16 +49,43 @@ function initBlog() {
 	    		var user = data[index].user;
 	    		var contenu = data[index].contenu;
 	    		var id = data[index].id;
-	    		html += '<li>user : ' + user + '<p/>message : ' + contenu + '<p/>id : ' + id + '<button class="Button2" type="button"> Delete </button>' + '</li>';
+	    		if(userType == 'Admin') {
+	    			html += '<li>user : ' + user + '<p/>message : ' + contenu + '<p/>id : ' + id + '<button class="Button2" type="button" onclick=supprimerBlogMsg(' + id + ')> Delete </button>' + '</li>';
+
+	    		}
+	    		else {
+	    			html += '<li>user : ' + user + '<p/>message : ' + contenu + '<p/>id : ' + id + '</li>';
+	    		}
 			}
 	    	msg.innerHTML = html;//'<li>' + this.responseText + '</li>';
 	    }
 	  };
-	  xhttp.open("GET", "gestionBlog.php?q=1", true);
+	  xhttp.open("GET", "gestionBlog.php?q=Lire", true);
 	  xhttp.send();
+}
 
-	/*msg.innerHTML = '<li> RJAKJRA </li>';*/
+function envoyerBlogMsg() {
+	var user = document.getElementById('user').value;
+	var contenu = document.getElementById('contenu').value;
+	var xhttp = new XMLHttpRequest();
+  	xhttp.onreadystatechange = function() {
+	    if (this.readyState == 4 && this.status == 200) {
+	    	initBlog('Visiteur');
+	    }
+	};
+	xhttp.open("POST", "gestionBlog.php?q=Envoyer&u=" + user + "&c=" + contenu, true);
+	xhttp.send();
+}
 
+function supprimerBlogMsg(id) {
+	var xhttp = new XMLHttpRequest();
+  	xhttp.onreadystatechange = function() {
+	    if (this.readyState == 4 && this.status == 200) {
+	    	initBlog('Admin');
+	    }
+	};
+	xhttp.open("POST", "gestionBlog.php?q=Supprimer&id=" + id, true);
+	xhttp.send();
 
 }
 

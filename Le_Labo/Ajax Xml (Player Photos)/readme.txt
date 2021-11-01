@@ -1,1 +1,0 @@
-To use Xml & Ajax open localhost website with Apache XAMP
