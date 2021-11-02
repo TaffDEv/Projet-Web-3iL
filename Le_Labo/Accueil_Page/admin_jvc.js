@@ -1,9 +1,11 @@
 var imgIndex = 0;
 
-function initConnexion() {
-	var connexion = document.getElementById('connexion');
-	var main = document.getElementById('main');
-	main.innerHTML = connexion.innerHTML;	
+function CreateArticle() {
+	var div = document.createElement('li');
+	div.innerHTML = "<textarea  id='contenu' type='text' name='contenu' class='case_message2'> </textarea>" + " <input type='submit' name='Ajouter' onclick=envoyerBlogMsg() style='padding: 10px; margin-left: 10px;'> </input>";
+	// better to use CSS though - just set class
+	div.setAttribute('class', 'bulle'); // and make sure myclass has some styles in css
+	document.getElementById("bulle2").appendChild(div);	
 }
 
 function initGalery() {
@@ -40,9 +42,9 @@ function initBlog() {
 	    		var user = data[index].user;
 	    		var contenu = data[index].contenu;
 	    		var id = data[index].id;
-	    		html += '<li>user : ' + user + '<p/>message : ' + contenu + '<p/></li>';
+	    		html += '<li>user : ' + user + '<p/>message : ' + contenu + '<p/>id : ' + id + '<p/><button class="Button2" type="button" onclick=supprimerBlogMsg(' + id + ')>Delete </button>' + '</li>';
 			}
-	    	msg.innerHTML = html;
+	    	msg.innerHTML = html;//'<li>' + this.responseText + '</li>';
 	    }
 	  };
 	  xhttp.open("GET", "gestionBlog.php?q=Lire", true);
@@ -60,6 +62,18 @@ function envoyerBlogMsg() {
 	};
 	xhttp.open("POST", "gestionBlog.php?q=Envoyer&u=" + user + "&c=" + contenu, true);
 	xhttp.send();
+}
+
+function supprimerBlogMsg(id) {
+	var xhttp = new XMLHttpRequest();
+  	xhttp.onreadystatechange = function() {
+	    if (this.readyState == 4 && this.status == 200) {
+	    	initBlog();
+	    }
+	};
+	xhttp.open("POST", "gestionBlog.php?q=Supprimer&id=" + id, true);
+	xhttp.send();
+
 }
 
 function changePhoto(par1) {
@@ -118,6 +132,10 @@ function createImageList(xml) {
 	    "' /></li>";
 	}
 	document.getElementById('galerie_mini').innerHTML = tableImage;
+}
+
+function uploadImg(name, desc) {
+	console.log("AKEOAAAAAA");
 }
 
 async function initDocument() {
