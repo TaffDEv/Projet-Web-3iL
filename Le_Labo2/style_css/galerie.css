@@ -1,0 +1,28 @@
+
+#galerie_mini
+{
+  display: none;
+}
+
+
+#photo
+{
+  clear: both ;
+  margin: 0 auto ;  
+}
+
+#photo dt
+{
+  font: italic 2.5em/1.5em Georgia, serif ;
+  color: #dcb ;
+}
+
+#photo dd
+{
+  margin: 0 ;
+}
+
+#photo img
+{
+  border: 1px solid #dcb ;
+}

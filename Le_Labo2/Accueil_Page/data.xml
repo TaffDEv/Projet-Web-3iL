@@ -1,0 +1,14 @@
+<GALERIE>
+	<PHOTO>
+		<IMG>images/Galaxy-S8.png</IMG>
+		<DESCRIPTION>Le titre de la photo 1</DESCRIPTION>
+	</PHOTO>
+	<PHOTO>
+		<IMG>images/htc-u-ultra-dos.png</IMG>
+		<DESCRIPTION>Le titre de la photo 2</DESCRIPTION>
+	</PHOTO>
+	<PHOTO>
+		<IMG>images/huawei-p10-dos.png</IMG>
+		<DESCRIPTION>Le titre de la photo 3</DESCRIPTION>
+	</PHOTO>
+</GALERIE>

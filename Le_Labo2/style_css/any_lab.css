@@ -1,0 +1,409 @@
+body
+{
+    background-color: rgba(224,238,238, 0.4);
+    /*display: flex;*/
+}
+
+#hidden
+{
+	display : none;
+}
+
+#container
+{
+    width: 1250px;
+    height: auto;
+    margin: auto;
+    background-color: #f5f4ed;
+    border:3px solid white;
+    box-shadow: 10px 10px 10px 10px rgba(33, 46, 179, 0.3);
+}
+
+#topbar
+{
+    width:auto; 
+    display:block; 
+    height:180px;
+    text-align:center;
+    font-family: Arial, Android, Fontana, Bell MT,  sans-serif;
+    color: #3C378B;
+    word-spacing: 100%;
+}
+
+#lbt
+{
+    height: 150px;
+    width : 450px;
+    float: center;
+    margin: auto;
+    background-color: snow;
+    margin-top: 10px;
+    border-radius: 20px;
+    box-shadow: 10px 20px 20px 0px rgba(81, 61, 61, 0.3);
+}
+
+#lbt h1 
+{
+    position: relative;
+    text-align: justify;
+    margin-top: -40px;
+    margin-bottom: 10px;
+    margin-left: 30px;
+}
+
+#lbt img 
+{
+    position: relative;
+    margin-top: -20px;
+}
+
+#zone_co
+{
+    position: relative;
+    float: right;
+    height: auto;
+    width: auto;
+    margin-top: -100px ;
+    margin-right: 20px;
+    background-color: ;
+}
+
+.Button 
+{
+    padding: 10px;
+    font-weight: bold;
+    -webkit-transition: all 0.5s;
+    -webkit-border-radius: 5px;
+    display: block;
+    background-color: snow;
+    text-align: center;
+    margin-left: 15px;
+}
+
+.Button:hover 
+{
+    color: black;
+    background:  #DCDCDC;
+    cursor: pointer;
+}
+
+
+#zone_co a 
+{
+    font-family: Calibri, Arial;
+    font-size: 2em;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+#main
+{
+    margin-top: 100px;
+    width: auto;
+    height:auto; 
+    display:block;
+    /*background-color: green;*/
+    font-family: Calibri, Arial;
+}
+
+#connexion{
+    padding: 10px;
+    position: relative;
+    margin-left: 100px;
+    background-color: green;
+}
+
+nav
+{
+    width: auto; 
+    height: auto;
+    /*position: relative;*/
+    background-color: snow;
+    font-size: 2em;
+    word-spacing: 100%;
+    text-transform: uppercase;
+    /*display: flex;*/
+}
+
+nav li
+{
+    /*margin-left: 10px ;*/
+    padding: 25px;
+    list-style: none;
+    width: auto;
+    height: auto;
+    cursor: pointer;    
+     
+}
+
+.navlib
+{
+    display: flex;
+    justify-content: center;
+}
+
+.bip{
+    /*padding: 5px;*/
+    display: inline-block;
+    /*background-color: #3C378B;*/  
+    margin-left: 25px ;
+    margin-right: 25px ;
+}
+
+.bip7{
+    color:black; 
+    font-family: Calibri, Arial; 
+    
+    
+}
+
+#columnright
+{
+    width: auto;
+    height: auto; 
+    margin-left: 40px;
+    margin-right: 40px;
+    font-family: Calibri, Arial;
+    /*background-color: green;*/
+}
+
+#bulleTab li
+{
+	list-style: none;
+    background-color: snow;
+    padding: 30px;
+    width: auto;
+    height: auto;
+    margin-top: 50px;
+    margin-bottom: 80px;
+    position: relative;
+    /*margin-left: 30px;*/
+    font-size: 25px;
+    font-weight: bold;
+    color: black;
+    border-radius: 20px;
+    box-shadow: 10px 20px 20px 0px rgba(185, 220, 254, 1);
+}
+#fix{
+    display: flex;
+    justify-content: center;
+}
+.Button2
+{
+    padding: 10px;
+    -webkit-transition: all 0.5s;
+    -webkit-border-radius: 10px;
+    /*display: flex;*/
+    background-color: snow;
+    width: 10%;
+    height: 10%;
+    /*text-align: center;*/
+    /*align-content: center;*/
+    
+}
+
+.Button2:hover
+{
+    color: black;
+    background:  #FFB6C1 ;
+    cursor: pointer;
+}
+
+.Button3
+{
+    padding: 10px;
+    -webkit-transition: all 0.5s;
+    -webkit-border-radius: 10px;
+    font-weight: bold;
+    background-color: snow;
+    width: 10%;
+    height: 10%;
+    align-content: center;
+}
+
+.Button3:hover
+{
+    color: black;
+    background:  #FFB6C1 ;
+    cursor: pointer;
+}
+
+.bulle
+{
+    list-style: none;
+    background-color: snow;
+    padding: 30px;
+    width: auto;
+    height: auto;
+    margin-top: 50px;
+    margin-bottom: 80px;
+    position: relative;
+    font-size: 25px;
+    font-weight: bold;
+    color: black;
+    border-radius: 20px;
+    box-shadow: 10px 20px 20px 0px rgba(81, 61, 61, 0.3);
+}
+
+.rédaq{
+    padding: 5px;
+    position: relative;
+    width: auto;
+    height: auto;    
+}
+
+.rédaq a{
+    color: black;
+}
+
+.bulle td{
+    padding: 10px;
+}
+
+.case_message{
+    width: 450px;
+    height: 150px;
+}
+
+#photo{
+    text-align: center;
+    width: auto;
+    height: auto; 
+    font-size: 15px;
+    font-weight: bold;
+}
+
+#picture{
+     width: 100%;
+     height: 95%;
+}
+
+#playerJS{
+
+    position: relative;
+    padding: 10px;
+    top: 0; bottom: 0;
+    left: 0; right: 0;
+    width: 600px;
+    height: 450px;
+    max-width: 100%;
+    max-height: 100%;
+    background-color: green; 
+}
+
+.case_message2
+{    
+
+    width: 50%;
+    height: 70%;
+
+}
+
+
+#footer
+{
+    margin-top: 150px;
+    padding: 5px 0;
+    background-color: silver;
+    color: dimgray;
+}
+
+.pro p 
+{
+    position: absolute;
+    text-align: justify;
+    display: inline-block;
+    Font-Weight: Bold;
+    font-family: Calibri, Arial;
+    font-size: 16px;
+    margin-bottom: 10px;
+    margin-left: 30px;
+}
+
+.lb
+{
+    margin-left: 30px;
+    position: relative;
+}
+
+.part
+{
+    box-shadow: 10px 20px 20px 0px rgba(81, 61, 61, 0.3);
+}
+
+a:link{color: red; text-decoration: none;}
+a:visited{color:  #865ab9  ;}
+a:hover{color: DodgerBlue;}
+
+/* Nouvelles règles si la fenêtre fait au plus 1024px de large */
+@media screen and (max-width: 1024px)
+{
+    #container
+    {
+        width: 700px;
+        height: 100%;        
+    }
+
+    #zone_co a 
+    {
+        font-family: Calibri, Arial;
+        font-size: 1em;
+        text-decoration: none;
+        cursor: pointer;
+    }
+
+    nav li
+    {
+        /*margin-left: 130px;*/
+        list-style: none;
+        width: auto;
+        height: auto;
+        cursor: pointer;
+    }
+
+    .bip{
+        padding: 5px;
+        display: inline-block;
+        margin-left: 25px ;
+        margin-right: 25px ;
+    }
+
+    #diaporama
+    {
+      display: none;
+    }
+
+    .pro p 
+    {
+        position: relative;
+        text-align: justify;
+        /*display: inline-block;*/
+        Font-Weight: Bold;
+        font-family: Calibri, Arial;
+        font-size: 1em;
+        margin-bottom: 10px;
+    }
+
+    #footer .lb
+    {
+        display: none;
+    }
+
+    .case_message{
+        width: 50%;
+        height: 50%;
+    }
+    
+    .Button 
+{
+    padding: 5px;
+    font-weight: bold;
+    -webkit-transition: all 0.5s;
+    -webkit-border-radius: 5px;
+    display: block;
+    background-color: snow;
+    text-align: center;
+    margin-left: 15px;
+}
+
+}
