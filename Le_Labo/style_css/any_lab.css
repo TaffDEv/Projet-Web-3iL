@@ -157,17 +157,7 @@ nav li
     
 }
 
-#columnright
-{
-    width: auto;
-    height: auto; 
-    margin-left: 40px;
-    margin-right: 40px;
-    font-family: Calibri, Arial;
-    /*background-color: green;*/
-}
-
-#bulleTab li
+#bulleTab li, #tableArticle li
 {
 	list-style: none;
     background-color: snow;
@@ -175,19 +165,25 @@ nav li
     width: auto;
     height: auto;
     margin-top: 50px;
-    margin-bottom: 80px;
+    margin-bottom: 50px;
     position: relative;
-    /*margin-left: 30px;*/
     font-size: 25px;
-    font-weight: bold;
     color: black;
     border-radius: 20px;
     box-shadow: 10px 20px 20px 0px rgba(185, 220, 254, 1);
 }
+
+#tableArticle li p
+{
+	font-size: 40px;
+	font-weight: bold;
+}
+
 #fix{
     display: flex;
     justify-content: center;
 }
+
 .Button2
 {
     padding: 10px;

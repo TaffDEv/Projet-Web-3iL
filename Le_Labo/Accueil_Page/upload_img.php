@@ -28,7 +28,6 @@
 		    	$path = $_FILES["fileToUpload"]["name"];
 		    	$desc = $_POST["description"];
 		    	$dom = new DOMDocument;
-
 		    	$document = DOMDocument::load("data.xml" );
 		    	$document->formatOutput = TRUE;
 				$img = $document->createElement("PHOTO" );

@@ -157,88 +157,25 @@
 			?>
 
 		</div>
-		
 			<!-- fin div connexion -->
 
-	<div id = 'accueil'>
+		<div id = 'accueil'>
+		
+			<?php
 
-				
-		<?php
+				if (isset($_SESSION['user_name'])) {
+						echo " <h1 style='text-align: center;'> Bonjour ".$_SESSION['user_name']." souhaitez-vous ajouter une section d'article ? </h1>";									
+						echo "<div id='fix'><button class='Button3' type='button' onclick=createArticle()>	+	</button> </div>";
+				}else{
 
-			if (isset($_SESSION['user_name'])) {
-					echo " <h1 style='text-align: center;'> Bonjour ".$_SESSION['user_name']." souhaitez-vous ajouter une section d'article ? </h1>";									
-					echo "<div id='fix'><button class='Button3' type='button' onclick=CreateArticle()>	+	</button> </div>";
-			}else{
-
-					echo "<h1 style='text-align: center;'> Veuillez vous connecter afin de procéder à des changements <a style='cursor: pointer;' href='Accueil_labo.php'> Connexion </a> </h1>";								
-			}										
-							
-		?>
-			
-				<div id="columnright">  			
-						
-					<div id="bulle2"> </div>
-						
-					<li class="bulle">
-
-						<p class="rédaq" >
-
-							&nbsp;&nbsp;
-							Après une crise difficile, Samsung lance son nouveau vaisseau-amiral, le Galaxy S8 et son grand frère, 
-							le S8+. Cette fois-ci, les bords sont incurvés sur les deux modèles. 
-							Et le lecteur de cartes MicroSD est de retour. 
-							
-						</p>
-						
-					</li>
-
-					<li class="bulle">				
-
-						<p class="rédaq" >
-
-							&nbsp;&nbsp;
-							Asus ne laisse guère de créneau inoccupé sur le marché informatique. Cartes mères, cartes graphiques,
-							écrans, claviers, souris, PC portables et mini PC gaming, comme le GR8.
-							Après une crise difficile, Samsung lance son nouveau vaisseau-amiral, le Galaxy S8 et son grand frère, 
-							le S8+. Cette fois-ci, les bords sont incurvés sur les deux modèles. 
-							Et le lecteur de cartes MicroSD est de retour. 						
-							
-
-						</p>
-
-					</li>
-												
-					<li class="bulle">
-
-						<p class="rédaq" >
-
-							&nbsp;&nbsp;
-							Annoncée il y a bientôt 1 an, la nouvelle console de Microsoft continue de faire fantasmer les 
-							uns et les autres sans qu’aucune vraie info tangible et officielle n’ait filtré depuis. C’est un tour de force de communication 
-							mais à quelques mois de l’E3, c’est trop peu pour les joueurs. 						
-
-						</p>
-
-					</li>
-
-					<li class="bulle">
-						
-						<p class="rédaq" >
-
-							&nbsp;&nbsp;
-							La plateforme de la Pebble ne dément pas son succès depuis le lancement du premier modèle début 2013, 
-							désormais, il y a un App store vous permettant d’installer des « Watch faces » personnalisées et des applications 
-							vous permettant de vous enregistrer sur Foursquare ou acheter un café chez Starbucks.					
-
-						</p>
-
-					</li>	
-
-				</div>
-				<!-- fin div columnright -->
-
-			</div>	
-
+						echo "<h1 style='text-align: center;'> Veuillez vous connecter afin de procéder à des changements <a style='cursor: pointer;' href='Accueil_labo.php'> Connexion </a> </h1>";								
+				}										
+								
+			?>
+			<div id="bulle2"></div>
+			<ul id="tableArticle">
+			</ul>
+		</div>
 		<div id = 'blog'>
 			
 			<?php include('blog.php') ?>			
@@ -248,32 +185,32 @@
 
 		<div id = 'playerJS'> <!-- nav -->
 
-			<ul id='galerie_mini'>
+		<input class="Button2" type="submit" value="Supprimer" name="submit" onclick=supprimerImage()>
 
-			</ul>
+		<ul id='galerie_mini'>
+		</ul>
 
-				<dl id='photo'>
-				    <dd><img id='picture'/></dd>
-				  
-				    <button id='backwardButton' type="button" onclick=changePhoto('backward')>
-				    	<
-					</button>
-					<span id ='text-img'>Default</span>
-					<button id='forwardButton' type="button" onclick=changePhoto('forward')>
-					    >
-					</button>
+			<dl id='photo'>
+			    <dd><img id='picture'/></dd>
+			  
+			    <button id='backwardButton' type="button" onclick=changePhoto('backward')>
+			    	<
+				</button>
+				<span id ='text-img'>Default</span>
+				<button id='forwardButton' type="button" onclick=changePhoto('forward')>
+				    >
+				</button>
 
-				</dl>
+			</dl>
 
-				<form action="upload_img.php" method="post" enctype="multipart/form-data">
-				  	Selectionner une image à ajouter :
-				  	<input type="file" name="fileToUpload" id="fileToUpload">
-					</p> Insérez une description : </p>
-					<input type="text" name="description" id="descriptionArea"> </input>
-					</p>
-					<input type="submit" value="Upload Image" name="submit" onclick=uploadImg()>
-				</form>
-
+			<form action="upload_img.php" method="post" enctype="multipart/form-data">
+			  	Selectionner une image à ajouter :
+			  	<input type="file" name="fileToUpload" id="fileToUpload">
+				</p> Insérez une description : </p>
+				<input type="text" name="description" id="descriptionArea"> </input>
+				</p>
+				<input type="submit" value="Upload Image" name="submit" onclick=uploadImg()>
+			</form>
 		</div>	
 	</div>
 </body>

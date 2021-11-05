@@ -23,7 +23,7 @@ function initAccueil() {
 	var accueil = document.getElementById('accueil');
 	var main = document.getElementById('main');
 	main.innerHTML = accueil.innerHTML;
-	var msg = document.getElementById('bulleTab');
+	var msg = document.getElementById("tableArticle");
 	msg.innerHTML = "";
 	var xhttp = new XMLHttpRequest();
   	xhttp.onreadystatechange = function() {
@@ -33,12 +33,12 @@ function initAccueil() {
 	    	for(var index = 0; index < data.length; index++) {
 	    		var titre = data[index].titre;
 	    		var texte = data[index].texte;
-	    		html += '<li>user : ' + titre + '<p/>message : ' + texte + '<p/></li>';
+	    		html += '<li><p>' + titre + '</p>' + texte + '</li>';
 			}
 	    	msg.innerHTML = html;
 	    }
 	  };
-	  xhttp.open("GET", "gestionBlog.php?q=Lire", true);
+	  xhttp.open("GET", "requeteArticle.php", true);
 	  xhttp.send();
 }
 

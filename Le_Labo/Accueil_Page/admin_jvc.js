@@ -1,11 +1,7 @@
 var imgIndex = 0;
 
-function CreateArticle() {
-	var div = document.createElement('li');
-	div.innerHTML = "<textarea  id='contenu' type='text' name='contenu' class='case_message2'> </textarea>" + " <input type='submit' name='Ajouter' onclick=envoyerBlogMsg() style='padding: 10px; margin-left: 10px;'> </input>";
-	// better to use CSS though - just set class
-	div.setAttribute('class', 'bulle'); // and make sure myclass has some styles in css
-	document.getElementById("bulle2").appendChild(div);	
+function createArticle() {
+	document.getElementById("bulle2").innerHTML = "<div class='bulle'>Titre : <input  id='titre' type='text' class='case_message2'></br> <textarea  id='texte' type='text' class='case_message'></textarea></br> <input type='submit' onclick=envoyerArticle() style='padding: 10px; margin-left: 10px;'></div>";
 }
 
 function initGalery() {
@@ -25,6 +21,24 @@ function initAccueil() {
 	var accueil = document.getElementById('accueil');
 	var main = document.getElementById('main');
 	main.innerHTML = accueil.innerHTML;
+	var msg = document.getElementById("tableArticle");
+	msg.innerHTML = "";
+	var xhttp = new XMLHttpRequest();
+  	xhttp.onreadystatechange = function() {
+	    if (this.readyState == 4 && this.status == 200) {
+	    	var data = JSON.parse(this.responseText);
+	    	var html = "";
+	    	for(var index = 0; index < data.length; index++) {
+	    		var titre = data[index].titre;
+	    		var texte = data[index].texte;
+	    		var id = data[index].id;
+	    		html += '<li><p>' + titre + '</p>' + texte + '</br><button class="Button2" type="button" onclick=supprimerArticle(' + id + ')>Supprimer </button></li>';
+			}
+	    	msg.innerHTML = html;
+	    }
+	  };
+	  xhttp.open("GET", "requeteArticle.php", true);
+	  xhttp.send();
 }
 
 function initBlog() {
@@ -42,7 +56,7 @@ function initBlog() {
 	    		var user = data[index].user;
 	    		var contenu = data[index].contenu;
 	    		var id = data[index].id;
-	    		html += '<li>user : ' + user + '<p/>message : ' + contenu + '<p/>id : ' + id + '<p/><button class="Button2" type="button" onclick=supprimerBlogMsg(' + id + ')>Delete </button>' + '</li>';
+	    		html += '<li>user : ' + user + '<p/>message : ' + contenu + '<p/>id : ' + id + '<p/><button class="Button2" type="button" onclick=supprimerBlogMsg(' + id + ')>Supprimer </button></li>';
 			}
 	    	msg.innerHTML = html;//'<li>' + this.responseText + '</li>';
 	    }
@@ -73,7 +87,42 @@ function supprimerBlogMsg(id) {
 	};
 	xhttp.open("POST", "gestionBlog.php?q=Supprimer&id=" + id, true);
 	xhttp.send();
+}
 
+function envoyerArticle() {
+	var titre = document.getElementById('titre').value;
+	var texte = document.getElementById('texte').value;
+	var xhttp = new XMLHttpRequest();
+  	xhttp.onreadystatechange = function() {
+	    if (this.readyState == 4 && this.status == 200) {
+	    	initAccueil();
+	    }
+	};
+	xhttp.open("POST", "gestionArticle.php?q=Envoyer&T=" + titre + "&t=" + texte, true);
+	xhttp.send();
+}
+
+function supprimerArticle(id) {
+	var xhttp = new XMLHttpRequest();
+  	xhttp.onreadystatechange = function() {
+	    if (this.readyState == 4 && this.status == 200) {
+	    	initAccueil();
+	    }
+	};
+	xhttp.open("POST", "gestionArticle.php?q=Supprimer&id=" + id, true);
+	xhttp.send();
+}
+
+function supprimerImage() {
+	var xhttp = new XMLHttpRequest();
+  	xhttp.onreadystatechange = function() {
+	    if (this.readyState == 4 && this.status == 200) {
+	    	//location.reload();
+	    	window.location.replace('Admin_page.php');
+	    }
+	};
+	xhttp.open("POST", "supprimerImage.php?id=" + imgIndex, true);
+	xhttp.send();
 }
 
 function changePhoto(par1) {
@@ -128,8 +177,9 @@ function createImageList(xml) {
 		tableImage += "<li><img src='" +
 		x[i].getElementsByTagName("IMG")[0].childNodes[0].nodeValue +
     	"' title='" +
-	    x[i].getElementsByTagName("DESCRIPTION")[0].childNodes[0].nodeValue +
+    	x[i].getElementsByTagName("DESCRIPTION")[0].childNodes[0].nodeValue +
 	    "' /></li>";
+	    
 	}
 	document.getElementById('galerie_mini').innerHTML = tableImage;
 }

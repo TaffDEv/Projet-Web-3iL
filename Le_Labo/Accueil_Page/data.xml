@@ -1,14 +1,3 @@
 <?xml version="1.0"?>
 <GALERIE>
-	<PHOTO>
-		<IMG>images/Galaxy-S8.png</IMG>
-		<DESCRIPTION>Le titre de la photo 1</DESCRIPTION>
-	</PHOTO>
-	<PHOTO>
-		<IMG>images/htc-u-ultra-dos.png</IMG>
-		<DESCRIPTION>Le titre de la photo 2</DESCRIPTION>
-	</PHOTO>
-	<PHOTO>
-		<IMG>images/huawei-p10-dos.png</IMG>
-		<DESCRIPTION>Le titre de la photo 3</DESCRIPTION>
-	</PHOTO><PHOTO><IMG>images/rural_urbain_france.PNG</IMG><DESCRIPTION>Ahmoez</DESCRIPTION></PHOTO><PHOTO><IMG>images/BenMike.png</IMG><DESCRIPTION>eza</DESCRIPTION></PHOTO></GALERIE>
+<PHOTO><IMG>images/Galaxy-S8.png</IMG><DESCRIPTION>Galaxy-S8</DESCRIPTION></PHOTO><PHOTO><IMG>images/iphone8.png</IMG><DESCRIPTION>iphone8</DESCRIPTION></PHOTO><PHOTO><IMG>images/huawei-p10-dos.png</IMG><DESCRIPTION>huawei-p10</DESCRIPTION></PHOTO></GALERIE>
