@@ -1,5 +1,5 @@
 <?php
-	$target_dir = $_SERVER['DOCUMENT_ROOT'] . '/Accueil_Page/images/';
+	$target_dir = $_SERVER['DOCUMENT_ROOT'] . '/Le_Labo/Accueil_Page/images/';
 	$target_file = $target_dir . basename($_FILES["fileToUpload"]["name"]);
 	echo $_POST["description"];
 	echo "</p>";
