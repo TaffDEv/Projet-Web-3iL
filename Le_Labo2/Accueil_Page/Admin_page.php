@@ -2,7 +2,7 @@
 	session_start();
 ?>
 
-<!DOCTYPEHTML>
+<!DOCTYPE HTML>
 
 <html lang="fr">
 
@@ -41,12 +41,7 @@
 							
 			
 			<div id="zone_co">
-
-			
-
 				 <?php 
-				 	
-
 						if(array_key_exists("submit", $_POST)){
 							/*session_start();*/							
 							unset($_SESSION);
@@ -167,7 +162,7 @@
 
 	<div id = 'accueil'>
 
-			
+				
 		<?php
 
 			if (isset($_SESSION['user_name'])) {
@@ -257,7 +252,7 @@
 
 			</ul>
 
-				  <dl id='photo'>
+				<dl id='photo'>
 				    <dd><img id='picture'/></dd>
 				  
 				    <button id='backwardButton' type="button" onclick=changePhoto('backward')>
@@ -268,12 +263,18 @@
 					    >
 					</button>
 
-				  </dl>
+				</dl>
+
+				<form action="upload_img.php" method="post" enctype="multipart/form-data">
+				  	Selectionner une image à ajouter :
+				  	<input type="file" name="fileToUpload" id="fileToUpload">
+					</p> Insérez une description : </p>
+					<input type="text" name="description" id="descriptionArea"> </input>
+					</p>
+					<input type="submit" value="Upload Image" name="submit" onclick=uploadImg()>
+				</form>
 
 		</div>	
-
 	</div>
-
 </body>
-
 </html>

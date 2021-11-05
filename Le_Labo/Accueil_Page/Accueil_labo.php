@@ -1,4 +1,4 @@
-<!DOCTYPEHTML>
+<!DOCTYPE HTML>
 
 <html lang="fr">
 
@@ -38,8 +38,7 @@
 					<a onclick=initConnexion()> Connexion </a>
 					<!-- <a href="http://localhost/Le_Labo/login.php" target="_blank"> Se connecter </a> -->
 						
-						</br>
-						
+					</br>
 					<!-- <a href="http://localhost/Le_Labo/formulaire_inscription.php" target="_blank"> Inscription </a> -->
 						
 					<!-- placer ici liens pour se co -->																							
@@ -147,7 +146,7 @@
 
 		<div id = 'accueil'>
 
-			<div id="columnright">  			
+			<ul id="columnright">  			
 						<!--<div class="text"> -->
 					<li class="bulle">
 
@@ -179,20 +178,7 @@
 
 					</li>						
 						<!--</div>-->
-					
-					<div id="diaporama">
-						
-						<figure>
-							
-							<a href="../pagesco/galaxyS8.html" target="blank" title="NEWS S8"> <img src="../Accueil_Page/smartpic/Le-Galaxy-S8.png" alt="NEWS S8"> </a>
-							<a href="../pagesco/Asus Rog GR8.html" target="blank" title="ROG GR8"> <img src="../Accueil_Page/smartpic/ASUS_Rogue.png" alt="ROG GR8"> </a>
-							<img src="../Accueil_Page/smartpic/X-Box Scorpio.png">
-							<img src="../Accueil_Page/smartpic/Pebble Steel.png">
-						
-						</figure>
-					
-					</div>
-					
+													
 					<li class="bulle">
 
 						
@@ -218,7 +204,7 @@
 							
 						</p>
 					</li>
-				</div>
+				</ul>
 					<!-- fin div columnright -->
 				
 			

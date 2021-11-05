@@ -167,7 +167,7 @@
 
 			if (isset($_SESSION['user_name'])) {
 					echo " <h1 style='text-align: center;'> Bonjour ".$_SESSION['user_name']." souhaitez-vous ajouter une section d'article ? </h1>";									
-					echo "<button class='Button3' type='button' onclick=CreateArticle()>	+	</button>";
+					echo "<div id='fix'><button class='Button3' type='button' onclick=CreateArticle()>	+	</button> </div>";
 			}else{
 
 					echo "<h1 style='text-align: center;'> Veuillez vous connecter afin de procéder à des changements <a style='cursor: pointer;' href='Accueil_labo.php'> Connexion </a> </h1>";								
@@ -207,20 +207,7 @@
 						</p>
 
 					</li>
-					
-					<div id="diaporama">
-						
-						<figure>
-							
-							<img src="../Accueil_Page/smartpic/Le-Galaxy-S8.png" alt="NEWS S8"> </a>
-							<img src="../Accueil_Page/smartpic/ASUS_Rogue.png" alt="ROG GR8"> </a>
-							<img src="../Accueil_Page/smartpic/X-Box Scorpio.png">
-							<img src="../Accueil_Page/smartpic/Pebble Steel.png">
-						
-						</figure>
-					
-					</div>
-					
+												
 					<li class="bulle">
 
 						<p class="rédaq" >

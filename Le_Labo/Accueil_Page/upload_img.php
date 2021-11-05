@@ -43,4 +43,5 @@
 		  	}
 		}
 	}
+	header('Location: Admin_page.php');
 ?>

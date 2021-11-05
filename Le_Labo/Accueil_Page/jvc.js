@@ -23,6 +23,23 @@ function initAccueil() {
 	var accueil = document.getElementById('accueil');
 	var main = document.getElementById('main');
 	main.innerHTML = accueil.innerHTML;
+	var msg = document.getElementById('bulleTab');
+	msg.innerHTML = "";
+	var xhttp = new XMLHttpRequest();
+  	xhttp.onreadystatechange = function() {
+	    if (this.readyState == 4 && this.status == 200) {
+	    	var data = JSON.parse(this.responseText);
+	    	var html = "";
+	    	for(var index = 0; index < data.length; index++) {
+	    		var titre = data[index].titre;
+	    		var texte = data[index].texte;
+	    		html += '<li>user : ' + titre + '<p/>message : ' + texte + '<p/></li>';
+			}
+	    	msg.innerHTML = html;
+	    }
+	  };
+	  xhttp.open("GET", "gestionBlog.php?q=Lire", true);
+	  xhttp.send();
 }
 
 function initBlog() {

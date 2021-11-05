@@ -134,10 +134,6 @@ function createImageList(xml) {
 	document.getElementById('galerie_mini').innerHTML = tableImage;
 }
 
-function uploadImg(name, desc) {
-	console.log("AKEOAAAAAA");
-}
-
 async function initDocument() {
 	await new Promise(resolve => setTimeout(resolve, 5)); //Sleep 5ms
 	loadDoc();
